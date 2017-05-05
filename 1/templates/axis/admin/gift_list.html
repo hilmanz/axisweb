@@ -1,0 +1,38 @@
+<div style="padding:10px;">
+<h2>Gift Management</h2>
+<hr>
+<p><input type="button" value="Add" onclick="javascript: window.location.href='index.php?s=user_management&act=add_gift' ;" /></p>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td width="10"><strong>ID</strong></td>
+	<td width="20%"><strong>Nama Gift</strong></td>
+	<td><strong>Gambar</strong></td>
+	<td><strong>Status</strong></td>
+	<td><strong>Date</strong></td>
+	<td><strong>End Date</strong></td>
+	<td><strong>Type</strong></td>
+	<td width="20%"><strong>Action</strong></td>
+	</tr>
+  {section name=i loop=$list}
+  <tr>
+    <td>{$list[i].id}</td>
+    <td>{$list[i].gift_name}</td>
+    <td>
+	{if $list[i].image eq !0}
+	<img src="{$img_path}/{$list[i].image}" alt="" height="42" width="42" />&nbsp;
+	{else}
+	&nbsp;
+	{/if}
+	</td>
+	<td>{$list[i].n_status}</td>
+	<td>{$list[i].date|date_format}</td>
+	<td>{$list[i].end_date|date_format}</td>
+	<td>{$list[i].type}</td>
+    <td><a href="?s=user_management&act=edit_gift&id={$list[i].id}" style="text-decoration:none" class="addSubPage">Edit</a>
+		<a onclick="return confirm('Are you sure want to delete this Gift ?');" href="?s=user_management&act=delete_gift&id={$list[i].id}" style="text-decoration:none" class="deletePage">Delete</a>
+		</td>
+    </tr>
+  {/section}
+</table>
+<p>{$paging}</p>
+</div>

@@ -1,0 +1,75 @@
+ <html>
+    <head>
+      <title>Test Login</title>
+      <script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
+      <script type="text/javascript" src="js/axis.js"></script>
+      <script type="text/javascript" src="js/jquery.scrollTo-1.4.2-min.js"></script>
+      <script>
+      var pt = "{$ping_token}";
+      var at = "{$access_token}";
+      var fid = {$fb_id};
+      var service_url="{$service_url}";
+      var nickname = "{$nickname}";
+      </script>
+    </head>
+    <body>
+      <div>
+      <p>User Id : {$user_id}</p>
+      <p>Facebook ID : {$fb_id}</p>
+      </div>
+      <div style="height:200px">
+      <h3>Table : </h3>
+	      <div id="wrapper">
+	      	
+		      <div id="container" style="position:absolute;left:0px;width:1200px;height:200px;">
+		      
+		      <div id="left" style="position:absolute;width:180px;left:420px;">
+		      {*}
+		      <span id="l2" style="float:right;width:50px;margin-right:10px;">
+		      		
+		      	</span>
+		      	<span id="l1" style="float:right;width:50px;margin-right:10px;">
+		      		
+		      	</span>
+		      	<span id="l0" style="float:right;width:50px;margin-right:10px;">
+		      		
+		      	</span>
+		      	{/*}
+		      </div>
+		      <div id="right" style="position:absolute;width:240px;left:600px;">
+		       {*}
+		      	<span id="r0" style="float:left;width:50px;margin-right:10px;">
+		      		
+		      	</span>
+		      	<span id="r1" style="float:left;width:50px;margin-right:10px;">
+		      		
+		      	</span>
+		      	<span id="r2" style="float:left;width:50px;margin-right:10px;">
+		      		
+		      	</span>
+		      	<span id="r3" style="float:left;width:50px;margin-right:10px;">
+		      		
+		      	</span>
+		      	{/*}
+		      </div>
+		      </div>
+		  </div>
+	    
+      </div>
+      <div style="float:left;position:relative;">
+      <a href="#" onclick="moveLeft('#container');return false;">Left</a>&nbsp;<a href="#" onclick="moveRight('#container');return false;">Right</a>&nbsp;
+      </div>
+      <script type="text/javascript">
+      {literal}
+      $(document).ready(function(){
+          //ping interval to determined if the user still login or not
+			setInterval(ping,3*1000);
+			init_seats(7,fid,nickname);
+      });
+      function ping(){
+    	  send_ping(pt);
+      }
+      {/literal}
+      </script>
+    </body>
+ </html>

@@ -1,0 +1,24 @@
+<div style="padding:10px;">
+<h2>Gift Edit</h2>
+<hr>
+<form action="index.php?s=user_management&act=update_gift" method="post" enctype="multipart/form-data">
+	<input type="hidden" name="id" value="{$id}">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+	<tr>
+		<td>Gift Name</td>
+		<td><input type="text" name="gift_name" maxlength="35" value="{$gift_name}"/></td>
+	</tr>
+	  <td>Images</td>
+	  <td>
+	  	<img src="../public_html/content/gift/{$img}" width="100" height="100"><input type="hidden" name="currimg" value="{$img}" /><br><br>
+	  	<input type="file" name="image" id="img" size="50"/><br><small>Leave blank if dont want to change</small></td>
+	  </tr>
+	<tr>
+		<td colspan="2">
+			<input type="hidden" name="update_gift" value="1" />
+			<input type="submit" name="save" value=" Save " />&nbsp;&nbsp;<input type="button" value="Cancel" onclick="javascript: window.location.href='index.php?s=user_management&act=gift' ;" />
+		</td>
+	</tr>
+ </table>
+ </form>
+</div>

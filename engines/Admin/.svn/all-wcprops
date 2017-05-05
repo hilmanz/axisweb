@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/axis/!svn/ver/28/trunk/web/engines/Admin
+END
+PluginManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/axis/!svn/ver/2/trunk/web/engines/Admin/PluginManager.php
+END
+UserManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/axis/!svn/ver/28/trunk/web/engines/Admin/UserManager.php
+END
+DashboardManager.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/axis/!svn/ver/2/trunk/web/engines/Admin/DashboardManager.php
+END
+Admin.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/axis/!svn/ver/2/trunk/web/engines/Admin/Admin.php
+END

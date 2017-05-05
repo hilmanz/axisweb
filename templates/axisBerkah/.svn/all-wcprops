@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/axis/!svn/ver/454/trunk/web/templates/axisBerkah
+END
+landing.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/axis/!svn/ver/394/trunk/web/templates/axisBerkah/landing.html
+END
+berkah_register_confirm.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/axis/!svn/ver/436/trunk/web/templates/axisBerkah/berkah_register_confirm.html
+END
+landing_berkah_barokah.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/axis/!svn/ver/418/trunk/web/templates/axisBerkah/landing_berkah_barokah.html
+END
+loading_message.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/axis/!svn/ver/335/trunk/web/templates/axisBerkah/loading_message.html
+END
+berkah_messages.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/axis/!svn/ver/436/trunk/web/templates/axisBerkah/berkah_messages.html
+END
+ruangpahala.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/axis/!svn/ver/403/trunk/web/templates/axisBerkah/ruangpahala.html
+END
+meta.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/axis/!svn/ver/308/trunk/web/templates/axisBerkah/meta.html
+END
+home.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/axis/!svn/ver/404/trunk/web/templates/axisBerkah/home.html
+END
+header.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/axis/!svn/ver/348/trunk/web/templates/axisBerkah/header.html
+END
+register-messages.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/axis/!svn/ver/304/trunk/web/templates/axisBerkah/register-messages.html
+END
+facebook_page_fan.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/axis/!svn/ver/466/trunk/web/templates/axisBerkah/facebook_page_fan.html
+END
+berkah_non_axis.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/axis/!svn/ver/436/trunk/web/templates/axisBerkah/berkah_non_axis.html
+END
+master.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/axis/!svn/ver/436/trunk/web/templates/axisBerkah/master.html
+END
+footer.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/axis/!svn/ver/336/trunk/web/templates/axisBerkah/footer.html
+END
+landing_berkah_barokah2.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/axis/!svn/ver/454/trunk/web/templates/axisBerkah/landing_berkah_barokah2.html
+END
+berkah_notification.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/axis/!svn/ver/393/trunk/web/templates/axisBerkah/berkah_notification.html
+END

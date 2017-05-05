@@ -1,0 +1,18 @@
+<div id="obrolan">
+	<div class="obrolan">
+		<h1>Obrolan Meja Makan</h1>
+		<div id="obrolanBox" class="scrollbar2 scroll-pane wide2 tall2">
+		{section name=i loop=$obrolan}
+			<div class="row">
+				<a class="thumb showPopup" href="#popupUser" onclick="javascript:profileConversation({$obrolan[i].user_id})"><img src="https://graph.facebook.com/{$obrolan[i].fb_id}/picture" /></a>
+				<div class="entry">
+					<p class="wordWarp"><a class="showPopup" href="#popupUser" onclick="javascript:profileConversation({$obrolan[i].user_id})">@{$obrolan[i].nickname}</a> {$obrolan[i].posting}</p>
+					<span class="time">{$timePosting[i]}</span>
+					<span class="date"></span>
+				</div>
+			</div><!-- end .row -->
+		{/section}
+			<input id="post_ts" type="hidden" value="{$lastPost}">
+		</div><!-- end .scrollbar -->
+	</div><!-- end .obrolan -->
+</div>

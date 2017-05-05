@@ -1,0 +1,73 @@
+/*
+Theme Name: AXIS BAROKAH
+Version: 1.0
+Author: ACIT JAZZ - 2012
+*/
+@import url('reset.css');
+@import url('../font/flamacondensed.css');
+
+@import url(http://fonts.googleapis.com/css?family=Voces);
+@import url(http://fonts.googleapis.com/css?family=Comfortaa:400,300,700);
+body {
+	font-size:16px;
+	line-height:1.4;
+	letter-spacing:0.01em;
+	color:#fff;
+    font-family: 'Voces',arial;
+}
+a {
+	outline:none;
+	color:#ad469c;
+	text-decoration:none;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+a:hover{
+	color:#ff00d5;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+
+#facebookTab{
+	width:790px;
+	margin:0 auto;
+}
+#facebookTabLike{
+	background:url(../img/berkah/berkah_tab.jpg) no-repeat;
+	width:790px;
+	margin:0 auto;
+	height:800px;
+	position:relative;
+}
+#content{
+	bottom: 125px;
+    left: 200px;
+    position: absolute;
+    color: #FFFFFF;
+	text-align:center;
+	width:410px;
+	font-size:12px;
+	line-height:22px;
+}
+#content p{
+	margin:0 0 10px 0;
+}
+#btnLanjut{
+	background:url(../img/berkah/btn_join.png) no-repeat;
+	width:198px; height:69px;
+	bottom: 51px;
+    font-size: 45px;
+    position: absolute;
+    right: 287px;
+    text-decoration: none;
+}
+#btnLanjut:hover{
+	background:url(../img/berkah/btn_join_hover.png) no-repeat;
+}

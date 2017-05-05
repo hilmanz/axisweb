@@ -1,0 +1,121 @@
+/*
+Theme Name: AXIS BAROKAH
+Version: 1.0
+Author: ACIT JAZZ - 2012
+*/
+.wrapper {
+	width:960px;
+}
+#lefBar{
+	width:220px;
+}
+/* ============ SLIDER =================*/
+#sliderContent {
+	max-width:1024px;
+	margin:0 auto;
+}
+.viewer {
+	max-width:1024px;
+}
+#slide .ui-widget-content{
+	background:url(../img/bgslide.png) repeat-x;
+	width:960px;
+	border-radius:10px;
+	height:5px;
+	margin:3px auto;
+}
+#newsTicker{
+	background:url(../img/1024/bg_newsticker.png) no-repeat 0 0px;
+	width:960px;
+}
+#center{
+	width:450px;
+}
+#rightBar,#updateStatus,#weeklyWinner{
+	width:250px;
+}
+#update_status{
+	width:235px;
+}
+.horizontal_scroller,.newsTicker{
+	width:750px;
+}
+#weeklyWinner{
+	background:url(../img/1024/weeklywinner.png) no-repeat;
+}
+#updateStatus{
+	background:url(../img/1024/updatebox.png) no-repeat;
+}
+#update_status .chooseFile{
+	margin:0 105px 0 0;
+}
+#update_status textarea{
+	width:208px;
+}
+#update_status input[type="submit"]{
+	padding:13px 0;
+}
+.rowSubmit label{
+	margin:10px 0 0 35px;
+}
+.maxChar{
+	right:15px;
+}
+#pushSelling{
+	width:200px;
+}
+.pushSelling h1{
+	margin:14px 0;
+}
+#counter{
+	background:url(../img/1024/counter.png) no-repeat;
+	width:200px;
+}
+#counter h1 {
+    font-size: 16px;
+    line-height: 30px;
+}
+#obrolan{
+	background:url(../img/1024/obrolanmeja.png) no-repeat;
+	width:470px;
+}
+#obrolan .entry{
+	width:360px;
+}
+#boxAdmin{
+	background:url(../img/1024/adminbox.png) no-repeat;
+	width:470px;
+}
+
+.wide1 {
+	width: 330px;
+}
+.tall1 {
+	height:150px;
+}
+.wide2 {
+	width: 440px;
+}
+.tall2 {
+	height:205px;
+}
+#copySlide{
+	width:960px;
+	padding:22px 10px 0 0;
+}
+.loaderUpload, .loaderEditNoHP{
+	width:235px;
+}
+#fileName{
+	width:55px;
+}
+#updateStatus .info{
+	left:155px;
+}
+#updateStatus_disable{
+	background:url(../img/2014/disable.gif) no-repeat;
+}
+#updateStatus_disable .statusPost{
+	padding:45px 20px;
+	font-size:18px;
+}

@@ -1,0 +1,24 @@
+
+    	<div id="login">
+        	<a href="index.php" class="">&nbsp;</a>
+        	<div class="login-content">
+              <form name="form1" method="post" action="login.php" class="loginform" style="background:none;" >
+                <input type="hidden" name="PHPSESSID" value="85a1fe34897ffd340ee39272d8a03b8c" />
+                  <label>Username</label>
+                  <input name="username" type="text" id="username" maxlength="20"> 
+                  <div class="space"></div>
+                  <label>Password</label>
+                  <input name="password" type="password" id="password" maxlength="20" />
+                  <div class="space"></div>
+                  
+                  <input name="f" type="hidden" id="f" value="1">
+                  <input id="button" type="submit" name="Submit" value="&nbsp;" />
+                  <div class="space5"></div>
+              </form>
+            </div><!-- .login-content -->
+            <div class="messageLoginbox">
+                {if $msg <> ""}
+                  <span class="messageLogin"> {$msg} </span>
+                {/if}
+            </div>
+        </div><!-- #login -->

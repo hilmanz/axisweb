@@ -1,0 +1,175 @@
+<div id="updateStatus" style="position: relative;">
+	<form id="update_status" action=" {if $is_admin}index.php?page=home&act=statusAdmin{else}index.php?page=home&act=updateStatus{/if}" method="post" enctype="multipart/form-data">
+		<div class="row">
+            <label>FOTO MAKANAN BUKA PUASA KAMU</label>
+            <div id="fileName"></div>
+            <a class="chooseFile" href="#">BROWSE</a>			
+			<input type="file" name="gambar" id="gambar" style="left: 80px;opacity: 0;position: absolute;top: 46px;cursor:pointer;" />	
+            <span class="info">Max Size 200 KB</span>	
+		</div>
+        <div class="row">
+           <label>STATUS {if $is_admin} ADMIN {/if} </label>
+           <span class="maxChar">140 karakter tersisa</span>
+           <textarea class="message_status" id="userStatus" name="userStatus"  maxlength="140"></textarea>
+	    </div>
+        <div class="row rowSubmit">
+        	<div class="cropBtn"><input id="normalUPT" type="button" value="UPDATE" /></div>
+            <label>SHARE</label>
+        	<a id="fbUPT" class="facebook" href="#">&nbsp;</a>
+            <a id="twtUPT" class="twitter" href="#">&nbsp;</a>
+            <a id="tweetShare" href="#">&nbsp;</a>
+			
+        </div>
+	</form>
+	<div class="statusPost"></div>
+	<div class="loaderUpload"><img src="img/loaders.gif" /></div>
+</div>
+{literal}
+<script type="text/javascript">		
+	var updateTypeCheck;
+	var errMsg;
+	var autoClose;
+	// INPUT TYPE FILE CUSTOM
+	$(function() {
+		$('.chooseFile').mouseover(function() {
+			$(this).addClass('over');
+		}).mouseout(function() {
+			$(this).removeClass('over');
+		});
+		//$('.chooseFile').button().file().choose(function(e, input) {
+		//	jQuery('#fileName').text(input.val());
+		//});
+	});
+	$("#gambar").live('change', function(){
+		$('#fileName').text($(this).val());
+	});
+	$(document).ready(function(){
+		updateCountdown();
+		var options = { 
+			target:        '.statusPost',   // target element(s) to be updated with server response 
+			beforeSubmit:  showRequest,  // pre-submit callback 
+			success:       showResponse,  // post-submit callback 
+			
+			// other available options: 
+			//url:       url         // override for form's 'action' attribute 
+			//type:      type        // 'get' or 'post', override for form's 'method' attribute 
+			//dataType:  null        // 'xml', 'script', or 'json' (expected server response type) 
+			clearForm: true,        // clear all form fields after successful submit 
+			resetForm: true        // reset the form after successful submit 
+	 
+			// $.ajax options can be used here too, for example: 
+			//timeout:   3000 
+		};
+		
+		//Normal Update
+		$('#normalUPT').live('click', function(){
+			updateTypeCheck = 'normal';
+			$('#update_status').ajaxSubmit(options);
+			return false;
+		});
+		
+		//Update and Share FB
+		$('#fbUPT').live('click', function(){
+			updateTypeCheck = 'fb';
+			$('#update_status').ajaxSubmit(options);
+			return false;
+		});
+		
+		//Update and Share Twitter
+		$('#twtUPT').live('click', function(){
+			updateTypeCheck = 'twt';
+			$('#update_status').ajaxSubmit(options);
+			return false;
+		});
+		
+		// pre-submit callback 
+		function showRequest() {
+			$('#updateStatus .loaderUpload').fadeIn();
+		} 
+		 
+		// post-submit callback 
+		function showResponse(responseText, statusText, xhr, $form)  {
+			$('#updateStatus .loaderUpload').fadeOut();
+			$('#fileName').html("");
+			$('.maxChar').html("140 characters remaining");
+			
+			if ($('.statusPost').text() != null || $('.statusPost').text() != ""){
+				$('.statusPost').fadeIn();
+				errMsg = parseInt($('.statusPost').text().length);
+				$('.statusPost').append('<input type=button name="closeUpload" id="closeUpload" value="X" />');
+				var popFB;
+				if(errMsg == 51){
+					popFB = true;
+				}else if(errMsg == 35){
+					popFB = true;
+				}
+				if(updateTypeCheck == 'fb' && popFB == true){
+					
+					$.ajax({
+						url: 'index.php?page=profile&act=shareFB',
+						dataType: 'json',
+						beforeSend: function(){
+						},
+						success: function(response) {
+							if (response['img'] == null){
+								var imgFB = "images/default-icon.gif";
+							}else{
+								var imgFB = "image_update/normal_"+response['img'];
+							}
+							
+							shareFB(response['nickname'],imgFB,response['posting']);
+							$.post('index.php?page=profile&actAjax=shareFBAjax');
+						
+						}
+					});
+				}else if(updateTypeCheck == 'twt' && popFB == true){
+					$.ajax({
+						url: 'index.php?page=profile&act=shareFB',
+						dataType: 'json',
+						beforeSend: function(){
+						},
+						success: function(response) {	
+							var posting = response['posting'];
+							//var browserWidth = (parseInt($(window).width())/2)-200;
+							//var browserHeight = parseInt($(window).height())/2;
+							var movePopup = window.open ("https://twitter.com/intent/tweet?button_hashtag=AXISbarokah&text="+posting+" https://www.tangkapberkahaxis.com","mywindow","menubar=1,resizable=1,width=350,height=250");
+							//movePopup.moveTo(browserWidth, browserHeight);
+							$.post('index.php?page=profile&actAjax=sharetwitterAjax');
+						}
+					});
+					
+				}
+				autoClose = setInterval(automateClose ,5000);
+				//$('.statusPost').delay(5000).fadeOut().html("");
+				//$('.statusPost').html("");
+			}
+			//$('.statusPost').delay(5000).fadeOut();
+			//$('.statusPost').delay(5000).html("");
+		}
+		
+		function automateClose(){
+			$('.statusPost').fadeOut();
+			$('.statusPost').html("");
+			clearTimeout(autoClose);
+		}
+		$('#closeUpload').live('click',function(){
+			$('.statusPost').fadeOut();
+			$('.statusPost').html("");
+		});
+	});
+	
+</script>
+{/literal}
+<script>
+{literal}
+	!function(d,s,id){
+		var js,fjs=d.getElementsByTagName(s)[0];
+		if(!d.getElementById(id)){
+			js=d.createElement(s);
+			js.id=id;
+			js.src="//platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js,fjs);
+			}
+	}(document,"script","twitter-wjs");
+{/literal}
+</script>

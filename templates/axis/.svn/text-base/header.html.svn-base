@@ -1,0 +1,15 @@
+<div id="top">
+	<div class="wrapper">
+		<a href="index.php" class="logoBarokah">&nbsp;</a>
+        <div id="bannerTop">
+        </div>
+		<div class="userInfo">
+			<a href="#" class="logoAxis">&nbsp;</a>
+			<div class="clear">
+				<span class="welcome">Hello, <span id="headNickname"></span></span>
+				<a href="#popupEditProfile" class="edit showPopup" onclick="javascript:loadProfile()">&nbsp;</a>
+				<a href="logout.php" class="logout">&nbsp;</a> 
+			</div>
+		</div>
+	</div>
+</div><!-- end #top -->

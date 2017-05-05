@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AXIS BAROKAH - GSM YANG BAIK</title>
+<link rel="shortcut icon" href="{$barokahUrl}img/favicon.ico">
+<link rel="apple-touch-icon" href="{$barokahUrl}img/favicon.png">
+<link rel="stylesheet" type="text/css" href="{$barokahUrl}css/axis.css" />
+<link rel="stylesheet" type="text/css" href="css/axisBerkahRegister.css" />
+<link rel="stylesheet" type="text/css" href="{$barokahUrl}js/jqueryui/css/smoothness/jquery-ui-1.7.2.custom.css">
+<link rel="stylesheet" type="text/css" href="css/scrollbar.css">
+<script type="text/javascript" src="{$barokahUrl}js/jquery-1.js"></script>
+<script type="text/javascript" src="{$barokahUrl}js/jquery-ui-1.js"></script>
+<script type="text/javascript" src="{$barokahUrl}js/jquery-custom-file-input.js"></script>
+<script type="text/javascript" src="{$barokahUrl}js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="{$barokahUrl}js/jScrollPane.js"></script>
+<script type="text/javascript" src="{$barokahUrl}js/jquery-custom-file-input.js"></script>
+<script type="text/javascript" src="{$barokahUrl}js/jquery-scroller-v1.min.js"></script>
+<script type="text/javascript" src="{$barokahUrl}js/scroll-startstop.events.jquery.js"></script>
+
+</head>
+
+<body id="landingPage">
+<div id="body">
+	<div id="top">
+    	<div class="wrapper">
+            <div class="userInfo">
+            	<a href="index.php" class="logoAxis">&nbsp;</a>
+            </div>
+        </div>
+    </div><!-- end #top -->
+    <div id="container">
+    	<div id="containerConnect">
+        	<div class="containerConnect">
+            	<h2>Hi, @{$twitID}!<br />minta No. hp kamu dong: </h2>
+                <form id="confirmAccount" action="index.php" method="post" enctype="application/x-www-form-urlencoded">
+                	<label>No.Hp</label>
+                    <input type="text" class="numeric" maxlength="15" id="nohp" name="nohp"/>
+                    <input type="submit" value="CONFIRM" />
+                </form>
+            </div><!-- end .containerConnect -->
+        </div><!-- end #containerConnect -->
+    </div><!-- end #container -->
+    <div id="footer">
+    	<div class="footer">
+        	<a class="facebook" href="https://www.facebook.com/AXISgsm" target="_blank">&nbsp;</a>
+            <a class="twitter" href="https://twitter.com/AXISgsm" target="_blank">&nbsp;</a>
+			<span class="copy">&copy; 2012 AXIS. All rights reserved. <a href="faq.html" target="_blank">FAQ</a> | <a href="berkah_tnc.html" target="_blank">Terms and Conditions</a></span>
+        </div>
+    </div><!-- end #footer -->
+</div><!-- end #body -->
+ {literal}
+	<script type="text/javascript">
+    
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-867847-38']);
+      _gaq.push(['_setDomainName', 'tangkapberkahaxis.com']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+    </script>
+    <!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: Axis Berkah Welcome Page 201207
+URL of the webpage where the tag is expected to be placed: http://www.tangkapberkahaxis.com
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 07/18/2012
+-->
+<script type="text/javascript">
+var axel = Math.random() + "";
+var a = axel * 10000000000000;
+document.write('<iframe src="http://fls.doubleclick.net/activityi;src=3749975;type=axisr808;cat=axisb414;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script>
+<noscript>
+<iframe src="http://fls.doubleclick.net/activityi;src=3749975;type=axisr808;cat=axisb414;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+    {/literal}
+</body>
+</html>

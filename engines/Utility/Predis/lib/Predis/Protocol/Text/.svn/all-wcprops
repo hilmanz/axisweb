@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/Text
+END
+ResponseBulkHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/Text/ResponseBulkHandler.php
+END
+ResponseIntegerHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/Text/ResponseIntegerHandler.php
+END
+ComposableTextProtocol.php
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/Text/ComposableTextProtocol.php
+END
+TextCommandSerializer.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/Text/TextCommandSerializer.php
+END
+ResponseStatusHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/Text/ResponseStatusHandler.php
+END
+ResponseMultiBulkStreamHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/Text/ResponseMultiBulkStreamHandler.php
+END
+ResponseErrorSilentHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/Text/ResponseErrorSilentHandler.php
+END
+ResponseMultiBulkHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/Text/ResponseMultiBulkHandler.php
+END
+ResponseErrorHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/Text/ResponseErrorHandler.php
+END
+TextProtocol.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/Text/TextProtocol.php
+END
+TextResponseReader.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/Text/TextResponseReader.php
+END

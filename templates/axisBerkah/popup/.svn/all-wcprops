@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/axis/!svn/ver/359/trunk/web/templates/axisBerkah/popup
+END
+popup_ps_failure.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/axis/!svn/ver/357/trunk/web/templates/axisBerkah/popup/popup_ps_failure.html
+END
+popup_ps_confirm.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/axis/!svn/ver/313/trunk/web/templates/axisBerkah/popup/popup_ps_confirm.html
+END
+popup_paketramadhan.html
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/axis/!svn/ver/290/trunk/web/templates/axisBerkah/popup/popup_paketramadhan.html
+END
+popup_ruangpahala.html
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/axis/!svn/ver/359/trunk/web/templates/axisBerkah/popup/popup_ruangpahala.html
+END
+popup_edit_profile.html
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/axis/!svn/ver/308/trunk/web/templates/axisBerkah/popup/popup_edit_profile.html
+END
+popupMessages.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/axis/!svn/ver/309/trunk/web/templates/axisBerkah/popup/popupMessages.html
+END

@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AXIS BAROKAH - GSM YANG BAIK</title>
+<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="apple-touch-icon" href="img/favicon.png">
+<link rel="stylesheet" type="text/css" href="{$baseUrl}landing/css/axisLanding.css" />
+<script type="text/javascript" src="{$baseUrl}landing/js/jquery.js"></script>
+<script type="text/javascript" src="{$baseUrl}landing/js/jquery-animate-css-rotate-scale.js"></script>
+<script type="text/javascript" src="{$baseUrl}landing/js/jquery-css-transform.js"></script>
+<script type="text/javascript" src="{$baseUrl}landing/js/jqueryResize.js"></script>
+<script type="text/javascript" src="{$baseUrl}landing/js/animation.js"></script>
+
+<script language="javascript" type="text/javascript" src="{$baseUrl}landing/js/jquery.easing.js"></script>
+<script language="javascript" type="text/javascript" src="{$baseUrl}landing/js/script.js"></script>
+<script type="text/javascript">
+var at = '{$access_token}';
+var service_url="{$service_url}";
+var token = "{$liked_token}";
+{literal}
+ $(document).ready( function(){	
+		var buttons = { previous:$('#lofslidecontent45 .lof-previous') ,
+						next:$('#lofslidecontent45 .lof-next') };
+						
+		$obj = $('#lofslidecontent45').lofJSidernews( { interval : 2000,
+												direction		: 'opacitys',	
+											 	easing			: 'easeInOutExpo',
+												duration		: 1200,
+												auto		 	: true,
+												isPreloaded : false,
+												maxItemDisplay  : 3,
+												navPosition     : 'horizontal', // horizontal
+												navigatorHeight : 32,
+												navigatorWidth  : 80,
+												mainWidth:860,
+												buttons			: buttons} );
+	});
+{/literal}
+</script>
+</head>
+
+<body>
+<div id="body">
+    <div id="container2">
+    	<div id="header">
+            <a href="index.php" class="logoAxis">&nbsp;</a>
+          <h1>Cuma scroll kanan-kiri,<br />dapet paket Barokah!</h1>
+        </div>
+            <div id="slides">
+                    <div id="lofslidecontent45" class="lof-slidecontent" style="width:860px; height:330px;">
+                    <div class="preload"><div></div></div>
+                     <!-- MAIN CONTENT --> 
+                      <div class="lof-main-outer" style="width:860px; height:330px;">
+                        <ul class="lof-main-wapper"> 
+                            <li>
+                              <img src="imgLanding/hadiah1.png" >   
+                            </li> 
+                            <li>
+                    
+                              <img src="imgLanding/hadiah2.png"  >         
+                            </li> 
+                             <li>
+                              <img src="imgLanding/hadiah3.png" >     
+                            </li>  
+                          </ul>  	
+                      </div>
+                    </div>
+            </div>
+        <div id="bottom">
+            <div class="textMiddle">
+            	<p>Ngabuburit bareng emang paling seru.<br />
+                Buruan gabung ke meja AXIS Barokah & dapetin hadiah yang tersebar di situ.<br />
+                Daftar aja pake akun Facebook kamu Beb!</p>
+            </div>
+            <!--<a id="fbCon"></a>-->
+            <!--<a id="btnLanjut" href="#">LANJUT  &raquo;</a>-->
+			
+			{if $userId eq  0}
+				<a id="fbCon" href="#" onclick="authorize('{$lanjutUrl}', {$appId},true);return false;"></a>
+			{else} 
+				{if $mustRegister}
+				<a id="btnLanjut" href="{$registerUrl}?fb_id={$userId}">LANJUT  &raquo;</a>
+				{else}
+				<a id="btnLanjut" href="{$fbConnect}?fb_id={$userId}">LANJUT  &raquo;</a>
+				{/if}
+			{/if}
+            <div class="textFoot">
+            	<p>Kalo udah kebagian Barokah, masuk ke Ruang Pahala yuk Beb &raquo;</p>
+            </div>
+			{if $userId2 eq 0}
+				<a id="logoBerkah" href="#" onclick="authorize('{$lanjutUrl2}', {$appId2},false);return false;"></a>
+			{else} 
+				{if $mustRegister}
+				<a id="logoBerkah" href="{$registerUrl2}?fb_id={$userId2}"></a>
+				{else}
+				<a id="logoBerkah" href="{$fbConnect2}?fb_id={$userId2}"></a>
+				
+				{/if}
+			{/if}
+        </div>
+    </div>
+    <div id="footer">
+    	<div class="footer">
+            <a class="facebook" href="https://www.facebook.com/AXISgsm" target="_blank">&nbsp;</a>
+            <a class="twitter" href="https://twitter.com/AXISgsm" target="_blank">&nbsp;</a>
+            <span class="copy">&copy; 2012 AXIS. All rights reserved. <a href="faq.html" target="_blank">FAQ</a> | <a href="tnc.html" target="_blank">Terms and Conditions</a></span>
+        </div>
+    </div><!-- end #footer -->
+</div><!-- end #body -->
+<script>
+		 
+		  var baseUrl = '{$baseUrl}';
+		  {literal}
+		  
+		  
+			
+				 
+			// Load the SDK Asynchronously
+			(function(d){
+			   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+			   if (d.getElementById(id)) {return;}
+			   js = d.createElement('script'); js.id = id; js.async = true;
+			   js.src = "//connect.facebook.net/en_US/all.js";
+			   ref.parentNode.insertBefore(js, ref);
+			 }(document));
+			function authorize(lanjutUrl, aplikasiID,isBarokah){
+				_appID = aplikasiID;
+				
+				 FB.init({
+					appId      : _appID, // App ID
+					channelUrl : baseUrl+'fb/channel.html', // Channel File
+					status     : true, // check login status
+					cookie     : true, // enable cookies to allow the server to access the session
+					xfbml      : true  // parse XFBML
+				  });
+				  /*FB.Event.subscribe('auth.login', function(response) {
+					  
+				  });*/
+				  FB.Event.subscribe('edge.create',
+						function(response) {
+							  $.ajax({
+								  url: service_url+"?service=facebook&m=like&access_token="+at,
+								  dataType: 'json',
+								  success: function( response ) {
+								  
+								}
+							});
+							
+						}
+					);
+				FB.login(function(response) {
+		        	   if (response.authResponse) {
+			        	   if(isBarokah){
+			        	   	  top.location = lanjutUrl;
+			        	   }else{
+			        		   top.location = lanjutUrl+"?fb_id="+response.authResponse.userID+"&t="+token;
+			        	   }
+		        	    	return false;
+		        	   } else {
+		        	     console.log('Maaf, kamu harus mengijinkan Axis Barokah untuk mengakses data kamu terlebih dahulu.');
+		        	   }
+		        	 }, {scope:'email,user_likes,read_friendlists,user_about_me,user_location,publish_stream,user_relationships'});
+			}
+
+			{/literal}
+			
+	</script>
+	 {literal}
+        <!--
+        Start of DoubleClick Floodlight Tag: Please do not remove
+        Activity name of this tag: Axis Barokah Welcome Page 201207
+        URL of the webpage where the tag is expected to be placed: http://www.tangkapberkahaxis.com
+        This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+        Creation Date: 07/18/2012
+        -->
+        <script type="text/javascript">
+        var axel = Math.random() + "";
+        var a = axel * 10000000000000;
+        document.write('<iframe src="http://fls.doubleclick.net/activityi;src=3749975;type=axisr808;cat=axisb012;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+        </script>
+        <noscript>
+        <iframe src="http://fls.doubleclick.net/activityi;src=3749975;type=axisr808;cat=axisb012;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+        </noscript>
+        
+        <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+		<script type="text/javascript">
+		
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-867847-38']);
+		  _gaq.push(['_setDomainName', 'tangkapberkahaxis.com']);
+		  _gaq.push(['_trackPageview']);
+		
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		
+		</script>
+   
+    {/literal}
+</body>
+</html>

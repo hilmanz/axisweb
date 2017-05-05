@@ -1,0 +1,235 @@
+/*
+Theme Name: AXIS BAROKAH
+Version: 1.0
+Author: ACIT JAZZ - 2012
+*/
+@import url('reset.css');
+@import url('../font/flamacondensed.css');
+/* ============ LAYOUT =================*/
+#container{
+	width:1000px;
+	margin:0 auto;
+	display:table;
+	position:relative;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	color:#fff;
+	font-size:14px;
+}
+#container p{
+	margin:15px 0;
+}
+.logoBigBarokah,.logoBigBerkah{
+	background:url(../img/berkah/logo_barokah_big.png) no-repeat;
+	text-decoration:none;
+	display:block;
+	width:500px; height:566px;
+	float:left;
+	position:relative;
+	left:auto;
+	margin:auto;
+	top:-70px;
+}
+.logoBigBerkah{
+	background:url(../img/berkah/logo_berkah_big.png) no-repeat;
+}
+#containerConnect{
+	background:url(../img/berkah/bg_connect.png) no-repeat;
+	width:766px; height:795px;
+	position:relative;
+	margin:0 auto;
+	top:-150px;
+}
+.containerConnect{
+	padding:310px 180px 0 180px;
+	color:#fff;
+	text-align:center;
+}
+.containerConnect h1{
+	font-size:50px;
+	letter-spacing:1px;
+	margin:0 0 20px 0;
+}
+.containerConnect h2{
+	font-size:30px;
+	margin:0 0 20px 0;
+}
+.containerConnect #messageBox{
+	left:50%;
+	position:absolute;
+	margin:0 0 0 -269px;
+	top:330px;
+}
+#containerLogin{
+	background:url(../img/berkah/bg_login.png) no-repeat;
+	width:698px; height:822px;
+	position:relative;
+	margin:0 auto;
+	top:-170px;
+}
+#container #containerLogin p{
+	margin:10px 0;
+}
+.contentLogin{
+	font-size:17px;
+	padding:455px 0 0 0;
+	text-align:center;
+}
+.btn_shareTwitter{
+	background:url(../img/berkah/shareOnTwit.png) no-repeat;
+	display:block;
+	width:211px; height:41px;
+	text-decoration:none;
+	margin:0 auto;
+	opacity:0.8;
+}
+.btn_connectTwitter{
+	background:url(../img/berkah/connectTwit.png) no-repeat;
+	display:block;
+	width:211px; height:41px;
+	text-decoration:none;
+	margin:0 auto;
+	opacity:0.85;
+}
+.btn_shareTwitter:hover, .btn_connectTwitter:hover,.btn_tnc:hover{
+	opacity:1;
+}
+.btn_tnc{
+	background:url(../img/berkah/btn_tnc.png) no-repeat;
+	width:220px; height:72px;
+	display:block;
+	margin:5px auto;
+	opacity:0.8;
+}
+#boxTnc,#messageBox{
+	width:770px; height:446;
+	margin:0 auto;
+	-moz-box-shadow:0 0 10px #41003a;
+	-webkit-box-shadow:0 0 10px #41003a;
+	box-shadow:0 0 10px #41003a;
+	position:relative;
+}
+#boxTnc{
+	height:auto;
+	background:#852c7c;
+	text-align:left;
+	margin:0 auto 80px auto;
+}
+.boxTnc{
+	padding:30px 40px;
+	font-size:16px;
+}
+#boxTnc ul{
+	list-style:circle;
+}
+#boxTnc ul li{
+	padding:0;
+	margin:0 0 0 20px;
+}
+#boxTnc h2{
+	margin:10px 0;
+}
+#messageBox{
+	background:url(../img/berkah/bg_message.jpg) no-repeat;
+	width:539px; height:136px;
+}
+.messageBox{
+	padding:30px 100px;
+	text-align:center;
+	font-size:16px;
+}
+.messageBox{
+	font-size:18px;
+	padding:2px 100px;
+}
+.boxTnc h1{
+	font-size:30px;
+}
+.closeBtn{
+	display:block;
+	width:30px; height:30px;
+	text-align:center;
+	line-height:30px;
+	background:#ff9d90;
+	color:#9a2d8f;
+	position:absolute;
+	top:0;
+	right:0;
+	font-family:Verdana, Geneva, sans-serif;
+}
+.closeBtn:hover{
+	background:#F90;
+}
+#confirmAccount label{
+	font-size:18px;
+	float:left;
+	width:80px;
+	display:block;
+	line-height:45px;
+}
+#confirmAccount input[type=text]{
+	width:180px;
+	float:left;
+	border:solid 1px #be3fa3;
+	padding:5px; height:25px;
+	box-shadow:0 2px 4px #666 inset;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	color:#871a6a;
+	font-size:18px;
+}
+#confirmAccount input[type=submit],.btn_lanjut{
+	background:url(../img/berkah/bg_confirm.jpg) no-repeat;
+	width:100px; height:35px;
+	text-align:center;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	color:#fff;
+	font-size:18px;
+	cursor:pointer;
+	border:none;
+	float:left;
+	margin:0 0 0 10px;
+	-moz-box-shadow:0 2px 4px #560045;
+	-webkit-box-shadow:0 2px 4px #560045;
+	box-shadow:0 2px 4px #560045;
+	line-height:35px;
+}
+#confirmAccount input[type=submit]:hover,.btn_lanjut:hover{
+	color:#871a6a;
+	-moz-box-shadow:0 0 4px #560045;
+	-webkit-box-shadow:0 0 4px #560045;
+	box-shadow:0 0 4px #560045;
+}
+.btn_lanjut{
+	display:block;
+	margin:0 auto;
+	float:none;
+}
+#footer a{
+	color:#fff;
+	text-decoration:underline;
+}
+.footer{
+	background:url(../img/foot.png) no-repeat;
+	width:626px; height:33px;
+	margin:0 auto;
+	text-align:center;
+	padding:15px 0 0 0;
+	color:#fff;
+}
+.footer .facebook,.footer .twitter{
+	background:url(../img/social_footer.png) no-repeat;
+	width:19px; height:19px;
+	display:block;
+	float:left;
+	margin:0 5px 0 83px;
+	text-decoration:none;
+}
+.footer .twitter{
+	background:url(../img/social_footer.png) no-repeat -27px 0;
+	margin:0;
+}
+span.copy{
+	float:left;
+	margin:0 0 0 10px;
+	display:block;
+	line-height:20px;
+}

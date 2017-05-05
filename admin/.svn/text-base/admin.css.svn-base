@@ -1,0 +1,486 @@
+/*
+Theme Name: SMAC - SOCIAL MEDIA ACTION CENTER
+Version: 1.0
+Author: ACIT JAZZ -  EUREKA!!! 2011
+
+*/
+
+body{
+	background:url(images/bg.gif) repeat #dddddd;
+	font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+	font-size:12px;
+	margin:0;
+	padding:0;
+	color:#333333;
+}
+#body{
+	min-width:1220px;
+	max-width:100%;
+}
+a{
+	color:#8dc54a;
+	outline:none;
+}
+a:hover{
+	color:#386600;
+}
+p{
+	margin:7px 0;
+	line-height:18px;
+}
+.normal{
+	font-weight:normal;
+}
+.clear{
+	clear:both;
+}
+.logo-block{
+	width:300px;
+	float:left;
+}
+.logobig{
+	background:url(images/logo_smac_big.png) no-repeat;
+	width:323px; height:138px;
+	display:block;
+	text-decoration:none;
+}
+.logosmall{
+	background:url(images/logo_smac_small.png) no-repeat;
+	width:146px;; height:48px;
+	display:block;
+	text-decoration:none;
+}
+#body #content{
+	margin: 0 0 30px 0;
+	padding:0 10px;
+}
+hr{
+	border-color: -moz-use-text-color -moz-use-text-color #CCCCCC;
+    border-style: none none dashed;
+    border-width: medium medium 1px;
+    height: 1px;
+    margin-bottom: 20px;
+}
+.tip {
+    color: #fff;
+    background:#666666;
+    display:none; /*--Hides by default--*/
+    padding:10px;
+    position:absolute;    z-index:1000;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+	font-size:11px;
+}
+
+/*=========== HEADER ============ */
+#header{
+	padding:15px 20px;
+	overflow:hidden;
+}
+.block-info{
+	float:left;
+}
+.user-info{
+	float:right;
+	overflow:hidden;
+	padding:18px 0 0 0;
+}
+.status-user{
+	padding:0 10px;
+	border-left: solid 1px #CCC;
+	display:block;
+	float:left;
+	line-height:25px;
+}
+.userbox{
+	float:left;
+	background:url(images/tr.png) repeat;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	-khtml-border-radius:15px;
+	border-radius:15px;
+	padding:0 15px;
+}
+.padlock{
+	background:url(images/icon_padlock.png) no-repeat 5px 5px;
+	width:20px; height:25px;
+	display:block;
+	border-left: solid 1px #CCC;
+	text-decoration:none;
+	float:right;
+}
+.username{
+	float:left;
+	padding:5px 10px;
+}
+/*=========== THE CONTAINER ============ */
+#main-container{
+	clear:both;
+	background: #fff;
+	min-height:800px;
+	overflow:hidden;
+}
+.top{
+	background:#f0f0f0;
+	padding:10px 0;
+	height:40px;
+}
+.admin-icon{
+	float:right;
+	padding:0 20px 0 0;
+	width:280px;
+	height:50px;
+}
+.admin-icon a{
+	display:block;
+	float:right;
+	text-decoration:none;
+	width:40px; height:44px;
+	margin:0 5px 0 0;
+}
+.admin-icon a.dashboard{
+	background:url(images/icon_admin.png) no-repeat -13px 0;
+}
+.admin-icon a.administration{
+	background:url(images/icon_admin.png) no-repeat -63px 0;
+}
+.admin-icon a.logoff{
+	background:url(images/icon_admin.png) no-repeat -113px 0;
+}
+.admin-icon a.dashboard:hover{
+	background:url(images/icon_admin_hover.png) no-repeat -13px 0;
+}
+.admin-icon a.administration:hover{
+	background:url(images/icon_admin_hover.png) no-repeat -63px 0;
+}
+.admin-icon a.logoff:hover{
+	background:url(images/icon_admin_hover.png) no-repeat -113px 0;
+}
+/*=========== LOGIN ============ */
+#login{
+	width:400px;
+	margin:30px auto;
+	overflow:hidden;
+}
+#login .logobig,#register .logobig{
+	margin:0 auto;
+}
+.login-content{
+	width:280px;
+	min-height:200px;
+	background:#fff;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	-khtml-border-radius:15px;
+	border-radius:15px;
+	-moz-box-shadow:0 0 5px #c5c5c5;
+	-webkit-box-shadow:0 0 5px #c5c5c5;
+	-khtml-box-shadow:0 0 5px #c5c5c5;
+	box-shadow:0 0 5px #c5c5c5;
+	margin:30px auto 10px auto;
+	overflow:hidden;
+	padding:10px 20px 30px 20px;
+}
+#login form{
+	margin:0;
+	padding:0;
+}
+#login label{
+	display:block;
+	text-transform:uppercase;
+	font-size:14px;
+	color:#666;
+	margin:20px 0 5px 0;
+	padding:0 0 0 38px;
+}
+#login input[type=text],#login input[type=password]{
+	background:url(images/bg_username.png) no-repeat;
+	width:162px; height:28px;
+	padding:5px 5px 5px 40px;
+	border:none;
+	margin:0 auto;
+	display:block;
+}
+#login input[type=password]{
+	background:url(images/bg_password.png) no-repeat;
+}
+#login input[type=text]:focus{
+	background:url(images/bg_username_active.png) no-repeat;
+}
+#login input[type=password]:focus{
+	background:url(images/bg_password_active.png) no-repeat;
+}
+#login input[type=submit]{
+	background:url(images/bg_button_login.png) no-repeat;
+	width:203px; height:40px;
+	border:none;
+	cursor:pointer;
+	margin:20px auto 0 auto;
+	display:block;
+}
+#login input[type=submit]:hover{
+	background:url(images/bg_button_login_hover.png) no-repeat;
+}
+#login .forgot{
+	color:#666;
+	text-align:center;
+}
+#login .forgot a{
+	color:#666;
+	text-decoration:underline;
+	text-align:center;
+}
+#login .forgot a:hover{
+	color:#090;
+}
+/*###FORM###*/
+form{
+	background:#F0F0F0;
+	padding:20px;
+	margin:0;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+}
+input[type=text],input[type=password],input[type=mail],textarea,select{
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	padding:7px 7px;
+	width:40%;
+	border:solid 1px #ccc;
+	background:#fff;
+	color:#666;
+}
+input[type=text]:focus, input[type=password]:focus, input.text:focus, input.title:focus, textarea:focus, select:focus,,input[type=mail]:focus {
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	padding:5px 7px;
+	width:200px;
+	border:solid 1px #ccc;
+	background:#fff;
+}
+input[type=button], input[type=submit],a.green-btn{
+	background:#77CD3A;
+    border: medium none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+	text-decoration:none;
+	text-transform:uppercase;
+	padding:5px 40px;
+    text-align: center;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+input[type=button]:hover, input[type=submit]:hover,a.green-btn:hover{
+	background:#666;
+}
+.title-form{
+	float:left;
+}
+.search-form{
+	background:none;
+	float:right;
+	padding:0;
+}
+.search-form input[type=text]{
+	width:200px;
+}
+.search-form input[type=submit]{
+    height: 36px;
+    padding: 5px 20px
+}
+.nav-bottom{
+	padding:30px 0;
+}
+img#marl-logo{
+	margin-top: -40px;
+}
+.messageLoginbox{
+	text-align:center;
+	color:#C00;
+}
+#topmenu{
+	background:none;
+	float: right;
+    height: 35px;
+    margin-top: 25px;
+    text-align: right;
+    width: 60%;
+}
+.red{
+	color:#ff3333;
+}
+.green{
+	color:#006633;
+}
+.orange{
+	color:#ff9933;
+}
+.darkblue{
+	color:#006699;
+}
+.purple{
+	color:#993399;
+}
+
+/*###NAVIGATION###*/
+.nav{
+    clear: both;
+    height: 28px;
+	padding:5px 20px;
+}
+.nav ul li {
+    float: left;
+    margin: 4px 15px 0 0;
+}
+.nav ul li a {
+	font-size:16px; margin:0;
+	text-shadow:0 1px 0 #fff;
+	font-weight:normal;
+	text-decoration:none;
+	color:#030;
+}
+.nav ul li a:hover{
+	color:#77cd3a;
+}
+.nav ul.menu ul li{
+	background:#F0F0F0;
+}
+#topmenu{
+	background:none;
+	float: right;
+    height: 35px;
+    margin-top: 25px;
+    text-align: right;
+    margin-right: 36px;
+    width: 50%;
+}
+#topmenu ul li {
+    float: right;
+    margin: 0 2px 0 0;
+}
+#topmenu ul li a {
+    background: none no-repeat scroll right center #a5a89f;
+    color: #fff;
+    display: block;
+    height: 20px;
+    padding: 4px 10px 0;
+	font-size: 14px;
+    -webkit-border-radius: 5px 5px 0 0; 
+    -moz-border-radius: 5px 5px 0 0; 
+    border-radius: 5px 5px 0 0; 
+   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+}
+#topmenu ul li a:hover {
+	color: #767676;
+}
+#topmenu ul li span, #topmenu ul li span.current:hover{
+	background: none;
+    display: block;
+    height: 24px;
+    padding-left: 8px;
+    text-align: center;
+    width: 100%;
+}
+#topmenu ul li span:hover{
+	background: none;
+}
+#topmenu ul li span.current a {
+    background: none no-repeat scroll right center #a5a89f;
+    color: #fff;
+    
+}
+#topmenu ul li span.current a:hover{
+	color: #767676;
+}
+#topmenu ul li span.current {
+    background: none;
+}
+#top {
+    float: left;
+    height: 60px;
+    margin-bottom: 1px;
+    padding: 70px 0 0 30px;
+    width: 100%;
+}
+
+/*########CONTENT##########*/
+.box{
+	background:#fff;
+	padding:10px;
+	margin:5px;
+	display:inline-block;
+	min-width: 165px;
+	
+}
+.box2{
+	background:#fff;
+	padding:10px;
+	margin:5px;
+	display:block;
+	min-width: 165px;
+}
+.box3{
+	background:#fff;
+	display:block;
+	margin:0 0 0 5px;
+}
+.box h2, .box2 h2, .box3 h2{
+	margin-top:0;
+}
+.box-title{
+	font-weight: bolder;
+	font-size: 16px;
+	
+}
+.box-value{
+	font-weight: bolder;
+	font-size: 50px;
+	margin: 30px 0 0;
+}
+.box-value2{
+	font-weight: bolder;
+	font-size: 25px;
+	margin: 15px 0 0;
+}
+.chart-title{
+	background: none repeat scroll 0 0 #FFFFFF;
+    font-size: 16px;
+    padding: 13px 13px 30px;
+    margin-top: 20px;
+    font-weight: bolder;
+}
+.dot-square{
+	background: none repeat scroll 0 0 #000000;
+    display: inline-block;
+    height: 13px;
+    margin-right: 10px;
+    width: 13px;
+    margin-left: 5px;
+}
+.badge-count{
+	font-weight: bolder;
+	font-size: 25px;
+}
+.box ul li{
+	position:relative;
+}
+.box ul li b{
+	left: 80px;
+    position: absolute;
+    top: 25px;
+}
+.box2 ul li{
+	position:relative;
+}
+.box2 ul li b{
+	left: 80px;
+    position: absolute;
+    top: 25px;
+}
+

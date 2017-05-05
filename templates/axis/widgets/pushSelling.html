@@ -1,0 +1,11 @@
+<div id="pushSelling">
+    <div class="pushSelling">
+		{section name=i loop=$homeSelling }
+        <h1><a class="showPopupBeli" href="#popupPSConfirm"  items_id="{$homeSelling[i].id}">{$homeSelling[i].name}</a>  </h1>
+		
+		{/section}
+
+        <a href="#popupPushSelling" class="moreDetail showPopup">&nbsp;</a>
+    </div>
+</div><!-- end #pushSelling --> 
+	{include file="axis/popup/popup_push_selling.html"}

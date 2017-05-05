@@ -1,0 +1,74 @@
+ <html>
+    <head>
+      <title>facebook connect area</title>
+      <script type="text/javascript" src="js/jquery.js"></script>
+      <script>
+      var at = '{$access_token}';
+      var service_url="{$service_url}";
+      {literal}
+      function log_like(){
+          /*
+        	$.ajax({
+      		  url: service_url+"?service=facebook&m=like&access_token="+at,
+      		  dataType: 'json',
+      		  success: function( response ) {
+      		  
+      		}
+      		
+        });
+          */
+      }
+       {/literal}
+      </script>
+    
+    </head>
+    <body>
+      <div id="fb-root"></div>
+      {if $userId eq 0}
+      <div class="fb-login-button" scope="email,user_likes,read_friendlists,user_about_me,user_location,publish_stream,user_relationships">Login with Facebook</div>
+      {/if}
+          
+      <script>
+      var _appID = '{$appId}';
+      
+      {literal}
+      
+      
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : _appID, // App ID
+            channelUrl : 'http://preview.kanadigital.com/axis/fb/channel.html', // Channel File
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
+          });
+          FB.Event.subscribe('auth.login', function(response) {
+              window.location.reload();
+          });
+          FB.Event.subscribe('edge.create',
+      		    function(response) {
+		        	  $.ajax({
+		        		  url: service_url+"?service=facebook&m=like&access_token="+at,
+		        		  dataType: 'json',
+		        		  success: function( response ) {
+		        		  
+		        		}
+		        	});
+      		        
+      		    }
+      		);
+        };
+             
+        // Load the SDK Asynchronously
+        (function(d){
+           var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           ref.parentNode.insertBefore(js, ref);
+         }(document));
+        {/literal}
+        
+      </script>
+    </body>
+ </html>

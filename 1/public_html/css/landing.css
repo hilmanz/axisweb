@@ -1,0 +1,123 @@
+/*
+Theme Name: AXIS BAROKAH
+Version: 1.0
+Author: ACIT JAZZ - 2012
+*/
+@import url('reset.css');
+@import url('../font/flamacondensed.css');
+body {
+	background:url(../img/bg.png) #a51f76 repeat-x;
+	font-size:15px;
+	line-height:1.4;
+	letter-spacing:0.01em;
+	color:#fff;
+    font-family: 'FlamaCondensedBookRegular',arial;
+}
+a {
+	outline:none;
+	color:#ad469c;
+	text-decoration:none;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+a:hover{
+	color:#ff00d5;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+
+#facebookTab{
+	width:790px;
+	margin:0 auto;
+}
+#facebookTabLike{
+	background:url(../img/bg_landing.png) no-repeat;
+	width:790px;
+	margin:0 auto;
+	height:800px;
+	position:relative;
+}
+#totalGabung{
+	bottom: 72px;
+    font-size: 61px;
+    left: 70px;
+    position: absolute;
+	text-shadow:0 1px 2px #9c7500;
+    font-family: 'FlamaCondensedBoldRegular';
+}
+#totalGabung h1{
+	width:152px;
+	font-size:50px;
+	text-align:center;
+}
+#content{
+	bottom: 57px;
+    left: 260px;
+    position: absolute;
+	color:#663366;
+}
+#content p{
+	margin:0 10px 10px 0;
+}
+#btnLanjut{
+	bottom: 75px;
+    color: #FFFFFF;
+    font-size: 45px;
+    position: absolute;
+    right: 94px;
+    text-decoration: none;
+}
+#btnLanjut:hover{
+	color:#a51f76;
+}
+/* ============ FOOTER =================*/
+#landingPage #footer{
+	position:fixed;
+	bottom:0;
+	width:100%;
+}
+#footer{
+	background:url(../img/bg_foot.png) repeat-x;
+	height:48px;
+	clear:both;
+	margin:40px 0 0 0;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+}
+.footer{
+	background:url(../img/foot.png) no-repeat;
+	width:626px; height:33px;
+	margin:0 auto;
+	text-align:center;
+	padding:15px 0 0 0;
+	color:#fff;
+}
+.footer .facebook,.footer .twitter{
+	background:url(../img/social_footer.png) no-repeat;
+	width:19px; height:19px;
+	display:block;
+	float:left;
+	margin:0 5px 0 92px;
+	text-decoration:none;
+}
+.footer .twitter{
+	background:url(../img/social_footer.png) no-repeat -27px 0;
+	margin:0;
+}
+.footer a{
+	color:#fff;
+	text-decoration:underline;
+}
+span.copy{
+	float:left;
+	margin:0 0 0 10px;
+	display:block;
+	line-height:20px;
+}

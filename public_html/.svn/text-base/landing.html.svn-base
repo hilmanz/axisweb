@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AXIS BAROKAH - GSM YANG BAIK</title>
+<link rel="shortcut icon" href="img/favicon.ico">
+<link rel="apple-touch-icon" href="img/favicon.png">
+</head>
+
+<body>
+<link rel="stylesheet" type="text/css" href="css/landing.css" />
+<link rel="stylesheet" type="text/css" href="css/scrollbar.css">
+<script type="text/javascript" src="js/jquery-1.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/jScrollPane.js"></script>
+<script type="text/javascript">
+$(function()
+{
+	$('.scrollbar')
+		.jScrollPane(
+			{
+				showArrows:false
+			}
+		);
+});
+</script>
+<div id="facebookTabLike">
+	<div id="totalGabung">
+    	<h1>100000</h1>
+    </div>
+    <div id="content">
+        <a href="register.php"  class="logoBigBarokah">&nbsp;</a>
+        <a href="register.php" id="teaserText">&nbsp;</a>
+        <div class="scrollbar scroll-pane" style="width:260px; height:104px;">
+        	<p>AXIS Barokah merupakan acara buka puasa online terakbar. Siapapun boleh ikutan selama punya akun Facebook atau Twitter yang aktif untuk bergabung. Mau gabung dari komputer boleh, dari smartphone OK, dari gadget lain juga OK asalkan tersambung dengan AXIS Barokah dan udah mendaftar ya Beb.</p>
+<p>AXIS Barokah sesuai dengan namanya bakalan bagi-bagi Barokah buat Bebeb yang ikutan di acara online akbar ini. Nah yang udah gabung bisa cari paket-paket Barokah yang tersebar di sepanjang acara buka puasa online ini. Ingat ya, hanya sepanjang waktu buka puasa Beb. Kalau udah lewat yaaa tunggu besok dong Beb. </p>
+		<p>AXIS Barokah tentu saja punya aturan main. Makanya pastiin akun Facebook atau Twitter Bebeb aktif dan data yang diberikan juga 100% data asli Beb. Sayang kan kalau Bebeb udah susah-susah usaha buat dapat Barokah tapi enggak bisa diklaim? Oh ya Beb, hati-hati sama penipuan ya karena yang dapat Barokah bakalan dihubungi langsung sama AXIS.</p> 
+<p>AXIS Barokah 100% cuma mau ngasih Bebeb sedikit Barokah Ramadhan tapi keputusan dari AXIS gak bisa diganggu gugat ya.</p>
+        </div><!-- end .scrollbar -->
+    </div>
+    <a href="#" id="btnLanjut">LANJUT</a>
+</div><!-- end #facebookTab -->
+    <div id="footer">
+    	<div class="footer">
+            <a class="facebook" href="http://www.facebook.com/AXISgsm" target="_blank">&nbsp;</a>
+            <a class="twitter" href="https://twitter.com/AXISgsm" target="_blank">&nbsp;</a>
+            <span class="copy">&copy; 2012 AXIS. All rights reserved. <a href="http://www.tangkapberkahaxis.com/faq.html" target="_blank">FAQ</a> | <a href="http://www.tangkapberkahaxis.com/tnc.html" target="_blank">Terms and Conditions</a></span>
+        </div>
+    </div><!-- end #footer -->
+</body>
+</html>

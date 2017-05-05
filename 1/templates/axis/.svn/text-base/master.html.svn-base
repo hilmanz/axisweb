@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+{$meta}
+</head>
+<body>
+	{$header}
+	{$mainContent}
+	{$footer}
+	{include file="axis/popup/popup_messages.html"}
+	{include file="axis/popup/popup_edit_profile.html"}
+	{include file="axis/popup/popup_weekly_winner.html"}
+	{include file="axis/popup/popup_hadiah.html"}
+	{include file="axis/popup/popup_hadiah2.html"}
+	{include file="axis/popup/popup_friend_detail.html"}
+	{include file="axis/popup/popup_user_detail.html"}
+	{include file="axis/popup/popup_image.html"}
+	{include file="axis/popup/popup_ps_confirm.html"}
+	{include file="axis/popup/popup_ps_failure.html"}
+	{include file="axis/popup/popup_ps_confirm_message.html"}
+	{include file="axis/popup/popup_berkah_comingsoon.html"}
+	
+	<div id="bgPopup"></div>
+	<div id="fb-root"></div>			
+	<script src="http://connect.facebook.net/en_US/all.js">
+	</script>
+	<script>
+	var appID = {$appID};
+	{literal}
+	 FB.init({ 
+		appId: appID, cookie:true, 
+		status:true, xfbml:true 
+	 });
+	 
+	</script>
+	{/literal}
+    {literal}
+	<script type="text/javascript">
+    
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-867847-38']);
+      _gaq.push(['_setDomainName', 'tangkapberkahaxis.com']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+    </script>
+    {/literal}
+</body>
+</html>
+

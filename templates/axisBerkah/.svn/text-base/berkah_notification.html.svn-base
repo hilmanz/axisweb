@@ -1,0 +1,28 @@
+ <div class="wrapper">
+        <div id="container">
+        	<div id="containerMessage">
+            	<div class="entry">
+					<div id="message6">
+						{$msg}
+					</div>
+                    <a class="btn_ruangPahala" href="?page=ruangPahala">&nbsp;</a>
+                    <a class="btn_shareTwitter" onclick="javascript:window.open('https://twitter.com/intent/tweet?button_hashtag=AXISberkah&text=Tulus bersihin timeline dari tweet kata-kata khilaf sama dengan kiat bersihkan hati untuk bulan Ramadhan','mywindow','menubar=1,resizable=1,width=350,height=250');return false;">&nbsp;</a>
+                    <a class="btnBack" href="" onclick="history.back(); return false;">BACK</a>
+                </div>
+            </div><!-- end #containerMessage -->
+        	<a href="index.php" class="logoBarokah">&nbsp;</a>
+        </div><!-- end #container -->
+    </div><!-- end .wrapper -->
+<script>
+{literal}
+	!function(d,s,id){
+		var js,fjs=d.getElementsByTagName(s)[0];
+		if(!d.getElementById(id)){
+			js=d.createElement(s);
+			js.id=id;
+			js.src="//platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js,fjs);
+			}
+	}(document,"script","twitter-wjs");
+{/literal}
+</script>

@@ -1,0 +1,15 @@
+<div id="boxAdmin2">
+	<div class="boxAdmin2">
+    	{*}
+		<div id="boxAdminStatus" class="scrollbar" style="height:150px;">
+		{section name=i loop=$adminPosting}
+			<div class="row">
+				<p>{$adminPosting[i].posting}</p>
+				<span class="time">{$timePosting[i]}</span>
+				<span class="date"></span>
+			</div><!-- end .row -->
+		{/section}
+		</div><!-- end .scorllbar -->
+        {/*}
+	</div><!-- end .boxAdmin -->
+</div>

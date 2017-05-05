@@ -1,0 +1,646 @@
+/*
+Theme Name: AXIS BAROKAH
+Version: 1.0
+Author: ACIT JAZZ - 2012
+*/
+@import url('reset.css');
+@import url('../font/flamacondensed.css');
+body {
+	background:url(../img/berkah/bg.jpg) #80267e repeat-x;
+	font-size:12px;
+	line-height:1.4;
+	letter-spacing:0.01em;
+	color:#333333;
+	font-family:Verdana, Geneva, sans-serif;
+}
+a {
+	outline:none;
+	color:#ad469c;
+	text-decoration:none;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+a:hover{
+	color:#ff00d5;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+
+/* ============ LAYOUT =================*/
+#container{
+	display:table;
+	width:100%;
+	padding:30px 0 0 0;
+}
+#lefBar{
+	width:300px;
+	float:left;
+}
+#center{
+	width:550px;
+	float:left;
+}
+#rightBar{
+	width:325px;
+	float:right;
+}
+#top {
+	width:100%;
+	display:table;
+	height:170px;
+	color:#fff;
+}
+#header {
+	background:url(../img/headtable.jpg) repeat-x;
+	width:100%;
+	display:table;
+	height:521px;
+}
+.wrapper {
+	width:1000px;
+	margin:0 auto;
+	position:relative;
+}
+.logoBarokah {
+	background:url(../img/berkah/logo_barokah.png) no-repeat;
+	width:154px;
+	height:136px;
+	text-decoration:none;
+	display:block;
+	position:absolute;
+	z-index:80;
+	margin:-20px 0 0 -40px;
+	bottom:0;
+}
+.logoAxis {
+	background:url(../img/axis_logo.png) no-repeat;
+	display:block;
+	width:173px;
+	height:68px;
+	margin:0 0 30px 0;
+	float:right;
+	text-decoration:none;
+}
+.logoBerkah{
+	background:url(../img/berkah/logo_berkah.png) no-repeat;
+	display:block;
+	width:221px; height:198px;
+	text-decoration:none;
+	top:30px;
+	left:-7px;
+	position:absolute;
+}
+.clear{
+	clear:both;
+}
+.userInfo {
+	float:right;
+	padding:35px 0 0 0;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	font-size:14px;
+}
+.userInfo .thumb{
+	margin:-30px 10px  0 0;
+}
+.userInfo .edit,.userInfo .logout{
+	display:block;
+	background:url(../img/btn_head.png) no-repeat;
+	width:70px; height:16px;
+	float:left;
+	text-decoration:none;
+}
+.userInfo .logout{
+	background:url(../img/btn_head.png) no-repeat -70px 0;
+	width:60px;
+}
+.userInfo .edit:hover{
+	background:url(../img/btn_head.png) no-repeat 0 -16px;
+}
+.userInfo .logout:hover{
+	background:url(../img/btn_head.png) no-repeat -70px -16px;
+}
+.userInfo .welcome{
+	float:left;
+	padding:0 20px 0 0;
+}
+/* ============ CONTENT =================*/
+#failTweet{
+	background:url(../img/berkah/bg_tweet.png) no-repeat;
+	width:666px; height:647px;
+	float:left;
+	position:relative;
+}
+.failTweet{
+	padding:140px 0 20px 112px;
+	width:455px;
+}
+.headTweet{
+	height:55px;
+}
+.headTweet .userName{
+    font-family: 'FlamaCondensedBookRegular',arial;
+	color:#981ae9;
+	font-size:26px;
+	line-height:32px;
+}
+.headTweet .nickname{
+	display:block;
+}
+.contentTweet{
+	padding:10px 0 0 0;
+}
+.contentTweet .entry{
+	width:335px;
+	float:left;
+	margin:0 0 0 10px;
+}
+.contentTweet a{
+	color:#007baf;
+}
+.contentTweet .row a{
+	padding:0 5px 0 0;
+}
+.chek{
+	float:left;
+	width:30px; height:40px;
+}
+.chek input{
+	width:30px;
+}
+#sideBar{
+	background:url(../img/berkah/bg_side.png) no-repeat;
+	width:377px;
+	position:absolute;
+	right:-35px;
+	top:160px;
+}
+#sideBarBlank{
+	background:url(../img/berkah/bg_side2.png) no-repeat;
+	width:377px;
+	position:absolute;
+	right:-35px;
+	top:160px;
+}
+.sideBar{
+	height:400px;
+	width:377px;
+	position:relative;
+}
+#boxMessage{
+	padding:20px 50px;
+	height:133px;
+}
+#boxMessage h1{
+	color:#fff;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	font-size:22px;
+}
+#sideBarBlank #boxMessage h1 {
+    font-size: 24px;
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+#hapusTweet{
+	color: #9a1a80;
+    display: block;
+    font-family: 'FlamaCondensedBookRegular',arial;
+    font-size: 50px;
+    line-height: 88px;
+    text-align: center;
+    width: 100%;
+	text-shadow:0 0 1px #ffc481;
+}
+#hapusTweet:hover{
+	color:#C00;
+}
+#pushSelling{
+	width:308px;
+	margin:120px 0 0 32px;
+	height:auto;
+	background:#fff;
+}
+.pushSelling{
+	padding:20px;
+	text-align:center;
+}
+.pushSelling h1{
+	margin:0;
+}
+#ruangPahala #pushSelling{
+	margin:0;
+	position:absolute;
+	bottom:0;
+	right:-35px;
+}
+#containerMessage{
+	background:url(../img/berkah/bg_message.png) no-repeat;
+	width:604px; height:604px; margin:0 auto;
+	position:relative;
+}
+#containerMessage .entry{
+	color: #FFFFFF;
+    font-family: 'FlamaCondensedBookRegular',arial;
+    height: 300px;
+    left: 50%;
+    margin: 0 0 0 -150px;
+    position: absolute;
+    text-align: center;
+    top: 230px;
+    width: 300px;
+	text-transform:uppercase;
+}
+#containerMessage .entry h1{
+	font-size:22px;
+}
+#containerMessage .entry h2{
+	font-size:16px;
+}
+.btn_ruangPahala{
+	background:url(../img/berkah/btn_ruangPahala.png) no-repeat;
+	display:block;
+	width:212px; height:55px;
+	text-decoration:none;
+	margin:20px auto 10px auto;
+}
+.btn_ruangPahala:hover{
+	background:url(../img/berkah/btn_ruangPahala.png) no-repeat 0 -55px;
+}
+.btn_shareTwitter{
+	background:url(../img/berkah/shareOnTwit.png) no-repeat;
+	display:block;
+	width:211px; height:41px;
+	text-decoration:none;
+	margin:0 auto;
+	opacity:0.8;
+}
+.btn_shareTwitter:hover{
+	opacity:1;
+}
+.orange{
+	color:#FF0;
+}
+#ruangPahala{
+	background:url(../img/berkah/ruangpahala.png) no-repeat;
+	width:916px; height:605px;
+	margin:0 auto;
+	position:relative;
+}
+.ruangPahala{
+	padding:20px 100px 0 100px;
+}
+#ruangPahala #title{
+	text-align:center;
+}
+#ruangPahala #title h1{
+	color:#fff;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	font-size:26px; letter-spacing:1px;
+	text-shadow:0 1px #000;
+	text-transform:uppercase;
+}
+.box{
+	width:127px;
+	height:150px;
+	display:block;
+	position:absolute;
+}
+.box:hover span{
+	background-position:0 -10px;
+}
+.box:hover .textMenu{
+	color:#C00;
+}
+.hap{
+	right:180px;
+	bottom:105px;
+}
+.ramadhan{
+	right:200px;
+	bottom:105px;
+}
+.health{
+	right:393px;
+	bottom:105px;
+}
+.rbt{
+	right:200px;
+	top:203px;
+}
+.games{
+	left:212px;
+	bottom:105px;
+}
+.wallpapper{
+	right:393px;
+	top:203px;
+}
+.ringtone{
+	left:212px;
+	top:203px;
+}
+.icons{
+	display:block;
+	width:127px; height:100px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.iconRingtone{
+	background-image:url(../img/berkah/icon_ringtone.png);
+	background-repeat:no-repeat;
+}
+.iconGames{
+	background-image:url(../img/berkah/icon_game.png);
+	background-repeat:no-repeat;
+}
+.iconHap{
+	background-image:url(../img/berkah/icon_hap.png);
+	background-repeat:no-repeat;
+}
+.iconHealth{
+	background-image:url(../img/berkah/icon_health.png);
+	background-repeat:no-repeat;
+}
+.iconRamadhan{
+	background-image:url(../img/berkah/icon_mesjid.png);
+	background-repeat:no-repeat;
+}
+.iconRbt{
+	background-image:url(../img/berkah/icon_rbt.png);
+	background-repeat:no-repeat;
+}
+.iconWallpaper{
+	background-image:url(../img/berkah/icon_wallpaper.png);
+	background-repeat:no-repeat;
+}
+.textMenu{
+	color:#000;
+	font-size:22px;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	width:127px; height:30px;
+	margin:10px 0 0 0;
+	text-align:center;
+	display:block;
+	display:block;
+	width:127px; height:100px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+/* ============ NEWS TICKER =================*/
+#newsTicker{
+	background:none;
+	width:1000px; height:52px;
+	clear:both;
+	margin:0 auto;
+	position:relative;
+}
+.newsTicker{
+	left: 0;
+    overflow: hidden;
+    width: 1000px;
+    position: absolute;
+    top: 22px;
+}
+.newsTicker h1{
+	color:#fff;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	font-size:18px;
+}
+.horizontal_scroller{
+	position:relative;
+	height:24px;
+    overflow: hidden;
+    width: 1000px;
+	display:block;
+	color:#fff;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	font-size:18px;
+}
+.scrollingtext{
+	position:absolute;
+	white-space:nowrap;
+}
+/* ============ FOOTER =================*/
+#landingPage #footer{
+	position:fixed;
+	bottom:0;
+	width:100%;
+}
+#footer{
+	background:url(../img/berkah/bg_footer.png) repeat-x;
+	height:100px;
+	clear:both;
+	padding:0 0 0 0;
+	margin:40px 0 0 0;
+}
+.footer{
+	background:url(../img/foot.png) no-repeat;
+	width:626px; height:33px;
+	margin:0 auto;
+	text-align:center;
+	padding:15px 0 0 0;
+	color:#fff;
+}
+.footer .facebook,.footer .twitter{
+	background:url(../img/social_footer.png) no-repeat;
+	width:19px; height:19px;
+	display:block;
+	float:left;
+	margin:0 5px 0 83px;
+	text-decoration:none;
+}
+.footer .twitter{
+	background:url(../img/social_footer.png) no-repeat -27px 0;
+	margin:0;
+}
+span.copy{
+	float:left;
+	margin:0 0 0 10px;
+	display:block;
+	line-height:20px;
+}
+/* ============ POP UP =================*/
+.popupMessage{
+	background:url(../img/berkah/bg_popup.png) no-repeat;;
+	width:520px;
+	position:absolute;
+	left:50%;
+	margin:100px 0 0 -260px;
+	z-index:10002;
+	top:0;
+	height:248px;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+}
+.popupMessage .poupContent{
+	overflow:hidden;
+	padding:20px 50px;
+	color:#fff;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	font-size:18px;
+	text-align:center;
+}
+.popupMessage .popupTop{
+	height:35px;
+	border:none;
+}
+.popupMessage .poupContent h1{
+	text-transform:none;
+}
+.popupMessage a.closePopup{
+	border:none;
+	background:#fe888f;
+	width:25px; height:25px;
+	display:block;
+	text-decoration:none;
+	position:absolute;
+	right:12px;
+	top:8px;
+	text-align:center;
+	line-height:25px;
+	z-index:10;
+	font-size:15px;
+	color:#9a2d8f;
+}
+a.closePopup:hover{
+	color:#fff;
+}
+.fullImage{
+	width:100%;
+}
+.fullImage img{
+	width:100%;
+}
+.authorImage{
+	padding:0 0 10px 0;
+	overflow:hidden;
+}
+.authorImage span.userName{
+	float:left;
+	margin:15px 0 0 10px;
+}
+
+.styleTable table {
+	border-collapse: collapse;
+	text-align: left;
+	width: 100%;
+}
+.styleTable {
+	font: normal 12px/150% Arial, Helvetica, sans-serif;
+	background: #ffe9fd;
+	overflow: hidden;
+	border: 1px solid #9b2d90;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.styleTable table td, .styleTable table th {
+	padding: 3px 10px;
+}
+.styleTable table thead th {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #FF9400), color-stop(1, #C47200) );
+	background:-moz-linear-gradient( center top, #FF9400 5%, #C47200 100% );
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF9400', endColorstr='#C47200');
+	background-color:#FF9400;
+	color:#FFFFFF;
+	font-size: 15px;
+	font-weight: bold;
+	border-left: 1px solid #ccc;
+	padding:10px 10px;
+}
+.styleTable table thead th:first-child {
+	border: none;
+}
+.styleTable table tbody td {
+	color: #6B6B6B;
+	border-left: 1px solid #ccc;
+	font-size: 12px;
+	font-weight: normal;
+	border-bottom:solid 1px #9b2d90;
+}
+.styleTable table tbody .alt td {
+	background: #FF9400;
+	color: #FFFFFF;
+}
+.styleTable table tbody td:first-child {
+	border: none;
+	border-bottom:solid 1px #9b2d90;
+	text-align:center;
+}
+.styleTable table tbody td:last-child{
+	text-align:right;
+}
+#popupContentAxis{
+	display:block; margin:100px 0 0 -450px; width:900px; background:#9b2d90;
+}
+#popupContentAxis .popupTop{
+	border-bottom:solid 1px #df00c9;
+}
+#popupContentAxis .popupTop h1{
+	text-transform:uppercase; color:#fff; line-height:30px; padding:0 0 0 20px; font-size:20px; line-height:35px;
+    font-family: 'FlamaCondensedBookRegular',arial;
+}
+#popupContentAxis .closePopup{
+	color:#fff; border-left:solid 1px #df00c9;
+}
+.bersih{
+	border: medium none;
+    font-size: 24px;
+    text-align: center;
+	display:table;
+	padding:30px;
+	clear:both;
+    font-family: 'FlamaCondensedBookRegular',arial;
+}
+.bersih a{    
+	background:#007BAF;
+    border-radius: 10px;
+    color: #FFFFFF;
+    display: block;
+    font-size: 24px;
+    padding: 5px 15px;
+	margin:30px 0;
+    text-transform: uppercase;
+}
+.bersih a:hover{
+	background:#0097d7;
+}
+#popupPaketRamadhan{
+	display:none;
+}
+.loaderBox{
+	text-align:center;
+	padding:100px 0;
+}
+.btnBack{
+	background:url(../img/btn_back.png) no-repeat;
+	width:84px; height:85px;
+	display:block;
+	position:absolute;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	color:#fff;
+	text-align:center;
+	line-height:85px;
+	left:50%;
+	bottom:-20px;
+	margin:0 0 0 -42px;
+	font-size:22px;
+	text-shadow:0 0 5px #fff;
+}
+.btnBack:hover{
+	color:#FC0;
+}

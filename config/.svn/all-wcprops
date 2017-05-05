@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/axis/!svn/ver/378/trunk/web/config
+END
+config.inc.sample.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/axis/!svn/ver/259/trunk/web/config/config.inc.sample.php
+END
+config.inc.sample2.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/axis/!svn/ver/3/trunk/web/config/config.inc.sample2.php
+END
+config.inc.berkah.live.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/axis/!svn/ver/378/trunk/web/config/config.inc.berkah.live.php
+END
+locale.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/axis/!svn/ver/328/trunk/web/config/locale.inc.php
+END
+email.php
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/axis/!svn/ver/240/trunk/web/config/email.php
+END
+config.inc.berkah.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/axis/!svn/ver/280/trunk/web/config/config.inc.berkah.php
+END

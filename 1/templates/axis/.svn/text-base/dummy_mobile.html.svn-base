@@ -1,0 +1,32 @@
+ <html>
+    <head>
+      <title>Mobile Dummy</title>
+    </head>
+    <body>
+      <div id="fb-root"></div>
+      {if $userId eq ""}
+      <div><a href="{$login_url}">Login with Facebook</a></div>
+      {else}
+      <div>
+      Hello, {$me.name}</div>
+      <div>
+      <img src="http://graph.facebook.com/{$userId}/picture/"/>
+      </div>
+      {/if}
+      {if $page_liked}
+	      <div>
+	     	 user has liked the page
+	      </div>
+	       <div>
+	      {section name=i loop=$friends}
+	      	<p>{$friends[i].friend_name}</p>
+	      {/section}
+	      </div>
+      {else}
+	      <div>
+	       <p>like dulu sebelum bisa ikutan :D</p> 
+	      </div>
+      {/if}
+
+    </body>
+ </html>

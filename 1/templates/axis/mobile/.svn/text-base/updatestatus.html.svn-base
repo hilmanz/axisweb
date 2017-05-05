@@ -1,0 +1,25 @@
+<div id="updateStatus">
+        <form id="update_status" action="?act=updateStatus&#msg" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <label>PHOTO</label>
+                <input type="file" name="gambar" id="gambar" />
+            </div>
+            <div class="row">
+				<label class="left">STATUS</label>
+               <span id="mTextLimit"><noscript><span class="maxChar">maksimal 140 karakter</span></noscript></span>
+               <textarea class="message_status" id="userStatus" name="userStatus"  maxlength="140"></textarea>
+            </div>
+            <div class="row rowSubmit">
+                <input type="submit" value="UPDATE" class="submitStatus" />
+            </div>
+        </form>
+</div><!-- end #updateStatus -->
+<script>
+{literal}
+	$(document).ready(function(){
+		var str = '<span class="maxChar">140 karakter tersisa</span>';
+		$("#mTextLimit").html(str);
+		updateCountdown();
+	});
+{/literal}
+</script>

@@ -1,0 +1,29 @@
+<div style="padding:10px;">
+<h2>Activity Log Overall</h2>
+<hr>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td width="10"><strong>Userid</strong></td>
+    <td width="10"><strong>Name</strong></td>
+	<td width="15%"><strong>Total Login</strong></td>
+	<td width="15%"><strong>Total Update Status</strong></td>
+	<td width="15%"><strong>Total Upload Photo</strong></td>
+	<td width="15%"><strong>Total Download</strong></td>
+	<td width="15%"><strong>Total Gift</strong></td>
+	<td width="15%"><strong>Total Logout</strong></td>
+	</tr>
+  {section name=i loop=$list}
+  <tr>
+    <td>{$list[i].user_id}&nbsp;</td>
+    <td><a href="?s=activity&act=detail_daily&user_id={$list[i].user_id}" style="text-decoration:none;"> {$list[i].nickname}</a>&nbsp;</td>
+    <td>{$list[i].tot_login}&nbsp;</td>
+    <td>{$list[i].tot_update}&nbsp;</td>
+    <td>{$list[i].tot_upload}&nbsp;</td>
+    <td>{$list[i].tot_download}&nbsp;</td>
+    <td>{$list[i].tot_gift}&nbsp;</td>
+    <td>{$list[i].tot_logout}&nbsp;</td>
+    </tr>
+  {/section}
+</table>
+<p>{$paging}</p>
+</div>

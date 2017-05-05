@@ -1,0 +1,32 @@
+/*
+Theme Name: AXIS Website FOR SUCKERs IE
+Version: 1.0
+Author: ACIT JAZZ - 2012
+*/
+#gambar{
+	background:none;
+	border:none;
+	color:#fff;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+}
+#update_status input[type=submit],#update_status input[type=button]{
+	padding:12px 0 6px 0;
+	width:80px;
+}
+.rowSubmit label{
+	margin:8px  0 0 90px;
+}
+#landingPage #footer{
+	height:80px;
+}
+.cropBtn{
+	width:80px;
+	overflow:hidden;
+}
+#landingPage .footer{
+	height:50px;
+	width:626px;
+	margin:0 auto;
+	display:table;
+}

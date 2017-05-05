@@ -1,0 +1,345 @@
+   <div class="wrapper">
+        <div id="container">
+        	<div id="ruangPahala">
+                <div class="ruangPahala">
+                	<div id="title">
+                    	<h1>Perbuatan baik pasti berbuah manis, beb! <br />
+                            Kamu berhak pilih kejutan menarik di <br />
+                            Ruang Pahala. Selamat!</h1>
+                    </div>
+                    <a class="box ringtone" href="#" cid="1">
+                    	<span class="iconRingtone icons">&nbsp;</span>
+                    	<span class="textMenu">RINGTONE</span>
+                    </a>
+                    <a class="box wallpapper" href="#" cid="2">
+                    	<span class="iconWallpaper icons">&nbsp;</span>
+                    	<span class="textMenu">WALLPAPER</span>
+                    </a>
+                    <a class="box games" href="#" cid="3">
+                    	<span class="iconGames icons">&nbsp;</span>
+                    	<span class="textMenu">GAMES</span>
+                    </a>
+                    <a class="box rbt" href="#" cid="4">
+                    	<span class="iconRbt icons">&nbsp;</span>
+                    	<span class="textMenu">TRUETONE</span>
+                    </a>
+                    <a class="box health" href="#" cid="5">
+                    	<span class="iconHealth icons">&nbsp;</span>
+                    	<span class="textMenu">HEALTH</span>
+                    </a>
+                    <a class="box ramadhan" href="#" cid="6">
+                    	<span class="iconRamadhan icons">&nbsp;</span>
+                    	<span class="textMenu">RAMADHAN</span>
+                    </a>
+         		    <a class="btnBack" href="" onclick="history.back(); return false;">BACK</a>
+                    {*}
+					<a class="box hap" href="#" cid="7">
+                    	<span class="iconHap icons">&nbsp;</span>
+                    	<span class="textMenu">HAP</span>
+                    </a>
+					{/*}
+                </div><!-- end .ruangPahala -->
+                <div id="pushSelling">
+                    <div class="pushSelling">
+                        <h1><a href="javascript:void(0)" class="getRamadhanPaket showPopup">Klik di sini untuk paket Ramadhan AXIS</a></h1>
+                    </div>
+                </div><!-- end #pushSelling -->
+            </div><!-- end #ruangPahala -->
+        	<a href="index.php" class="logoBarokah">&nbsp;</a>
+        </div><!-- end #container -->
+    </div><!-- end .wrapper -->
+
+{include file="axisBerkah/popup/popup_ruangpahala.html"}
+{include file="axisBerkah/popup/popupMessages.html"}
+{include file="axisBerkah/popup/popup_ps_confirm.html"}
+{include file="axisBerkah/popup/popup_ps_failure.html"}
+{literal}
+<script>
+
+$(".box").click(function(){
+	$('#rowsContent').html( '<span style="color:black"><h4>tunggu ya bep, lagi di cari ni berkah nya..</h4></span>' );
+	var targetID = "#popupContentAxis";
+	$.post('?page=ruangPahala&act=getContentsByID',{c_id:$(this).attr('cid')}, function(data){
+		
+		if(data){
+			var html = '';
+			var no = 1;
+			html +='<table cellspacing="0" cellpadding="0">';
+            html +='        <tbody>';
+			for(var i in data){
+				
+				html +='			  <tr>';
+				html +='				<td>'+no+'</td>';
+				html +='				<td>'+data[i].name+'</td>';
+				html +='				<td><a  class="showPopupBeli" href="#popupPSConfirm"  items_id="'+data[i].id+'">BELI</a></td>';
+				html +='				<td>'+data[i].content_prize+'</td>';
+				html +='			  </tr>';
+				no++;
+			}
+            html +='          </tbody>';
+            html +='        </table>';
+			$('#rowsContent').html(html);
+			
+		$(".showPopupBeli").click(function(){
+			var targetID = $(this).attr('href');
+			var item_id = $(this).attr('items_id');
+				
+		
+			$.post('index.php?'+gud, function(data) {
+				//console.log(data);
+				if(data.response==2){
+				
+					$('.messagePSConfirm').html(data.status);
+			
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupPSConfirmMessage").fadeIn();
+					$("#popupPSConfirmMessage").addClass('visible');
+					$("#bgPopup").fadeIn();	
+										
+				}				
+				if(data.response==0){
+					
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupPSConfirm").fadeIn();
+					$("#popupPSConfirm").addClass('visible');
+					$("#bgPopup").fadeIn();		
+					
+				}
+				if(data.response==1){
+					var htmlPaidContent = '<h1>Mau download konten ini?</h1>';
+					 htmlPaidContent += '<h2>Cek SMS dari AXIS di HP kamu, dan ikuti petunjuknya, ya!</h2>';
+					 
+					$.post('index.php?'+pc,{item_id:item_id} ,function(data) {
+						if(data.response==1) htmlPaidContent = data.message;
+					});
+					
+					$('.messagePSConfirm').html(htmlPaidContent);
+			
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupPSConfirmMessage").fadeIn();
+					$("#popupPSConfirmMessage").addClass('visible');
+					$("#bgPopup").fadeIn();		
+				
+				}
+			});
+			
+	
+	});
+	
+	
+	$("#sendVerCodeTOSMS").click(function(){
+		$('#sendVerCodeTOSMS').html('tunggu ya sampai sms nya terkirim...');
+		$.post('index.php?'+gvc, function(data) {
+			if(!data){
+				
+					var htmlSuccessVerified ='Bep, Sori nih kodenya salah <br /> Coba lagi ya bep';
+					$(".popupTextMessage").html(htmlSuccessVerified);
+									
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupMessages").fadeIn();
+					$("#popupMessages").addClass('visible');
+					$("#bgPopup").fadeIn();				
+				}
+				
+				$('#sendVerCodeTOSMS').html('SUDAH terkirim ya..');
+					
+		});
+	
+	});
+	
+	
+	$('#sendVerCode').click(function(){
+		var verCode = $("#verCode").val();
+		$.post('index.php?'+vc, { code: verCode}, function(data) {
+			if(data.response==1){
+					var htmlSuccessVerified ="<h1>Selamat ya Beb!<br />";
+						htmlSuccessVerified += "Nomor Kamu udah Terverifikasi<br />";
+						htmlSuccessVerified += "Kalau kamu ada kendala atau pertanyaan, kamu bisa email ke : hemat@axisworld.co.id</h1>";
+					$(".messagePSConfirm").html(htmlSuccessVerified);
+									
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupPSConfirmMessage").fadeIn();
+					$("#popupPSConfirmMessage").addClass('visible');
+					$("#bgPopup").fadeIn();		
+					
+				}else {
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+						$("#popupPSFailure").fadeIn();
+						$("#popupPSFailure").addClass('visible');
+						$("#bgPopup").fadeIn();	
+				
+				}
+		
+			
+		});
+	
+	});
+	
+		}
+	
+	});
+	$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+	$(targetID).fadeIn();
+	$(targetID).addClass('visible');
+	$("#bgPopup").fadeIn();	
+});
+
+$(".getRamadhanPaket").click(function(){
+	$('#rowsContent').html( '<span style="color:black"><h4>tunggu ya bep, lagi di cari ni berkah nya..</h4></span>' );
+	var targetID = "#popupContentAxis";
+	$.post('?page=paketRamadhan&act=getContentsByID', function(data){
+		
+		if(data){
+			var html = '';
+			var no = 1;
+			html +='<table cellspacing="0" cellpadding="0">';
+            html +='        <tbody>';
+			for(var i in data){
+				
+				html +='			  <tr>';
+				html +='				<td>'+no+'</td>';
+				html +='				<td>'+data[i].name+'</td>';
+				html +='				<td>'+data[i].description.replace(/\|/gi,"<br />"); +'</td>';
+				html +='				<td>'+data[i].content_prize+'</td>';
+				html +='				<td><a  class="showPopupBeli" href="#popupPSConfirm"  items_id="'+data[i].id+'">BELI</a></td>';
+				html +='			  </tr>';
+				no++;
+			}
+            html +='          </tbody>';
+            html +='        </table>';
+			$('#rowsContent').html(html);
+			
+		$(".showPopupBeli").click(function(){
+			var targetID = $(this).attr('href');
+			var item_id = $(this).attr('items_id');
+				
+		
+			$.post('index.php?'+gud, function(data) {
+				//console.log(data);
+				if(data.response==2){
+				
+					$('.messagePSConfirm').html(data.status);
+			
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupPSConfirmMessage").fadeIn();
+					$("#popupPSConfirmMessage").addClass('visible');
+					$("#bgPopup").fadeIn();	
+										
+				}				
+				if(data.response==0){
+					
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupPSConfirm").fadeIn();
+					$("#popupPSConfirm").addClass('visible');
+					$("#bgPopup").fadeIn();		
+					
+				}
+				if(data.response==1){
+					var htmlPaidContent = '<h1>Mau download konten ini?</h1>';
+					 htmlPaidContent += '<h2>Cek SMS dari AXIS di HP kamu, dan ikuti petunjuknya, ya!</h2>';
+					 
+					$.post('index.php?'+pc,{item_id:item_id} ,function(data) {
+						if(data.response==1) htmlPaidContent = data.message;
+					});
+					
+					$('.messagePSConfirm').html(htmlPaidContent);
+			
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupPSConfirmMessage").fadeIn();
+					$("#popupPSConfirmMessage").addClass('visible');
+					$("#bgPopup").fadeIn();		
+				
+				}
+			});
+			
+	
+	});
+	
+	
+	$("#sendVerCodeTOSMS").click(function(){
+		$('#sendVerCodeTOSMS').html('tunggu ya sampai sms nya terkirim...');
+		$.post('index.php?'+gvc, function(data) {
+			if(!data){
+					var htmlSuccessVerified ='Bep, Sori nih kodenya salah <br /> Coba lagi ya bep';
+					$(".popupTextMessage").html(htmlSuccessVerified);
+									
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupMessages").fadeIn();
+					$("#popupMessages").addClass('visible');
+					$("#bgPopup").fadeIn();				
+				}
+		
+			$('#sendVerCodeTOSMS').html('SUDAH terkirim ya..');
+		});
+	
+	});
+	
+	
+	$('#sendVerCode').click(function(){
+		var verCode = $("#verCode").val();
+		$.post('index.php?'+vc, { code: verCode}, function(data) {
+			if(data.response==1){
+					var htmlSuccessVerified ="<h1>Selamat ya Beb!<br />";
+						htmlSuccessVerified += "Nomor Kamu udah Terverifikasi<br />";
+						htmlSuccessVerified += "Kalau kamu ada kendala atau pertanyaan, kamu bisa email ke : hemat@axisworld.co.id</h1>";
+					$(".messagePSConfirm").html(htmlSuccessVerified);
+									
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupPSConfirmMessage").fadeIn();
+					$("#popupPSConfirmMessage").addClass('visible');
+					$("#bgPopup").fadeIn();		
+					
+				}else {
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+						$("#popupPSFailure").fadeIn();
+						$("#popupPSFailure").addClass('visible');
+						$("#bgPopup").fadeIn();	
+				
+				}
+		
+			
+		});
+	
+	});
+	
+		}
+	
+	});
+	$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+	$(targetID).fadeIn();
+	$(targetID).addClass('visible');
+	$("#bgPopup").fadeIn();	
+});
+
+
+</script>
+
+{/literal}

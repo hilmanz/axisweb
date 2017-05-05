@@ -1,0 +1,45 @@
+<div class="wrapper">
+	<div id="container">
+		<div id="failTweet">
+			<div class="failTweet">
+				 <div class="headTweet">
+					<h1 class="userName">Vina Alfiani</h1>
+					<span class="nickname">@{$twitList[0].twitter}</span>
+				 </div>
+				 <div class="contentTweet">
+					 <div id="twitList" class="scrollbar scroll-pane wide6 tall6">
+					 {section name=i loop=$twitList}
+						<div id="{$twitList[i].feed_id}" class="row">
+							<a class="thumb showPopup" href="#popupUser"><img src="content/user/thumb/1.jpeg" /></a>
+							<div class="entry">
+								<p><a class="showPopup" href="#popupUser">@{$twitList[i].twitter_id}</a>{$twitList[i].txt}.</p>
+								<span class="time">{$twitList[i].created_at_str}</span>
+								<span class="date"></span>
+							</div>
+							<div class="chek"><input class="twitCheck" type="checkbox" no="{$twitList[i].feed_id}" /></div>
+						</div><!-- end .row -->
+					 {/section}
+					</div><!-- end .scrollbar -->
+				</div>
+			</div><!-- end .failTweet -->
+		</div><!-- end #failTweet -->
+		<div id="sideBar">
+			<div class="sideBar">
+				<div id="boxMessage">
+					<h1>Buseeet…!<br /> Kata-kata khilaf kamu parah banget! Buruan deh dihapus!</h1>
+				</div>
+				<a href="#" id="hapusTweet">DELETE</a>
+				<div id="pushSelling">
+					<div class="pushSelling">
+<<<<<<< .mine
+						<h1><a href="#popupPaketRamadhan" class="showPopup">Klik di sini untuk paket ramandhan AXIS</a></h1>
+=======
+						<h1>Klik di sini untuk paket ramadhan AXIS</h1>
+>>>>>>> .r286
+					</div>
+				</div><!-- end #pushSelling -->
+			</div>
+		</div>
+		<a href="index.php" class="logoBarokah">&nbsp;</a>
+	</div><!-- end #container -->
+</div><!-- end .wrapper -->

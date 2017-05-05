@@ -1,0 +1,62 @@
+<script>
+      var pt = "{$ping_token}";
+      var at = "{$access_token}";
+      var at2 = "{$access_token2}";
+      var fid = "{$fb_id|strval}";
+      var service_url="{$service_url}";
+      var nickname = "{$nickname}";
+</script>
+<div id="header">
+	<div id="slide">
+		<div id="sliderContent" class="ui-corner-all">		
+		  <div id="viewContainer" class="viewer ui-corner-all">
+			<div id="pageContainer" class="content-conveyor ui-helper-clearfix" >		
+					<div id="left">
+					
+					</div>
+					
+					<div id="right">
+					  </div>
+			</div><!-- end .content-conveyor -->
+		  </div><!-- end .viewer -->
+		  <div id="slider"><div class="centerPoint"></div></div>
+		  <div id="copySlide">
+			<div align="center">
+				<h1>SCROLL AJA BEB!</h1>
+			</div>
+		  </div>
+		</div><!-- end #sliderContent -->
+	</div><!-- end #slide -->
+</div><!-- end #header -->
+<div class="wrapper">
+	<div id="container">
+		<div id="lefBar">
+			{$userStats}
+			{$pushSelling}
+		</div><!-- end #lefBar -->
+		<div id="center">
+			{$adminHAP}
+			{$obrolanMejaMakan}
+		</div><!-- end #center -->
+		<div id="rightBar">
+			{$updateStatus}
+			{$weeklyWinner}
+		</div><!-- end #rightBar -->
+		{$newsTicker}
+	</div><!-- end #container -->
+</div><!-- end .wrapper -->
+
+ <script type="text/javascript">
+      {literal}
+      $(document).ready(function(){
+          //ping interval to determined if the user still login or not
+			
+			setInterval(ping,3*1000);
+			init_seats(7,fid,nickname);
+      });
+      function ping(){
+    	  send_ping(pt);	  
+      }
+      {/literal}
+      </script>
+	  	{if $popupjam4} {include file="axis/popup/popup_messages_jam_4.html"} {/if}

@@ -1,0 +1,167 @@
+/*
+Theme Name: AXIS BERKAH
+Version: 1.0
+Author: ACIT JAZZ - 2012
+*/
+@import url('reset.css');
+@import url('../font/flamacondensed.css');
+body {
+	background:url(../img/mobile/bg.jpg) #a51f76 repeat;
+	font-size:14px;
+	line-height:1.4;
+	letter-spacing:0.01em;
+	color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	margin:10px;
+}
+#body{
+	max-width:320px;
+	margin:0 auto;
+}
+a {
+	outline:none;
+	color:#ad469c;
+	text-decoration:none;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+#bodyLogin{
+	background:url(../img/berkah/mobile/logo_berkah.png) center top no-repeat;
+	padding:300px 0 0 0;
+}
+a:hover{
+	color:#ff00d5;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+
+#connectTwitter{
+	text-align:center;
+	background:#fcb813;
+	padding:20px 0;
+}
+#container{
+	background:url(../img/berkah/mobile/bg.png) repeat;
+	padding:10px;
+}
+#top{
+	padding:10px 0;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	font-size:16px;
+	overflow:hidden;
+}
+.welcome{
+	padding:10px 0 0 0;
+	display:block;
+	float:left;
+	font-size:22px;
+}
+.btnYellow{
+    font-family: 'FlamaCondensedBookRegular',arial;
+	background:#fbb812;
+	padding:5px 10px;
+	text-transform:uppercase;
+	color:#7116a2;
+}
+.btnYellow:hover{
+	color:#7116a2;
+	background:#F90;
+}
+#top .btnYellow{
+	float:right;
+}
+.row{
+	overflow:hidden;
+	padding:10px 0;
+	clear:both;
+}
+#container .row{
+	border-bottom:solid 1px #949195;
+	color:#333333;
+}
+.deleteBox{
+	float:left;
+	padding:10px 0;
+}
+.deleteBox input{
+	width:20px;
+}
+.entry{
+	float:left;
+	max-width:280px;
+}
+.entry a{
+	color:#660099;
+	font-weight:bold;
+}
+.date,.time{
+	color:#999999;
+	font-size:12px;
+}
+.rowDelete{
+	background:#fbb812;
+	display:block;
+	padding:8px 0;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	font-size:24px;
+	margin:10px 0;
+	text-align:center;
+}
+.rowSubmit{
+	padding:10px 0;
+	border-top:solid 1px #7116a2;
+	text-align:center;
+}
+.submitStatus,.submitLogin{
+	background:none;
+	border:none;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	font-size:30px;
+	color:#7116a2;
+	width:auto;
+	cursor:pointer;
+	margin:0 auto;
+	padding:0;
+}
+#paging{
+	background:#b058d0;
+	padding:0 0;
+	overflow:hidden;
+}
+#paging a{
+    font-family: 'FlamaCondensedBookRegular',arial;
+	background:#fbb812;
+	padding:5px 15px;
+	text-transform:uppercase;
+	color:#7116a2;
+	font-size:20px;
+}
+#paging a:hover{
+	background:#F90;
+}
+.prev{
+	float:left;
+}
+.next{
+	float:right;
+}
+.centerText{
+	text-align:center;
+}
+#messageAdmin{
+	background:#fff;
+	padding:20px 15px;
+	color:#7116a2;
+	text-align:center;
+}
+#footer{
+	padding:20px 0;
+	text-align:center;
+}

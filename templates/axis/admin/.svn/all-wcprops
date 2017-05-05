@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/axis/!svn/ver/237/trunk/web/templates/axis/admin
+END
+activity_daily.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/axis/!svn/ver/143/trunk/web/templates/axis/admin/activity_daily.html
+END
+message_list.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/axis/!svn/ver/143/trunk/web/templates/axis/admin/message_list.html
+END
+news_edit.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/axis/!svn/ver/47/trunk/web/templates/axis/admin/news_edit.html
+END
+user_edit.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/axis/!svn/ver/205/trunk/web/templates/axis/admin/user_edit.html
+END
+photo_list.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/axis/!svn/ver/47/trunk/web/templates/axis/admin/photo_list.html
+END
+gift_list.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/axis/!svn/ver/143/trunk/web/templates/axis/admin/gift_list.html
+END
+news_new.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/axis/!svn/ver/47/trunk/web/templates/axis/admin/news_new.html
+END
+activity_list.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/axis/!svn/ver/143/trunk/web/templates/axis/admin/activity_list.html
+END
+message_edit.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/axis/!svn/ver/143/trunk/web/templates/axis/admin/message_edit.html
+END
+message_new.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/axis/!svn/ver/84/trunk/web/templates/axis/admin/message_new.html
+END
+gift_edit.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/axis/!svn/ver/47/trunk/web/templates/axis/admin/gift_edit.html
+END
+activity_hourly.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/axis/!svn/ver/143/trunk/web/templates/axis/admin/activity_hourly.html
+END
+gift_new.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/axis/!svn/ver/47/trunk/web/templates/axis/admin/gift_new.html
+END
+news_list.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/axis/!svn/ver/47/trunk/web/templates/axis/admin/news_list.html
+END
+user_list.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/axis/!svn/ver/237/trunk/web/templates/axis/admin/user_list.html
+END

@@ -1,0 +1,8 @@
+<div id="messageAdmin">
+    <p><a href="#">@admin</a> {$adminHAP.posting|strip_tags}</p>
+</div>
+<div id="footer">
+    <div class="footer">
+        <span class="copy">&copy; 2012 AXIS. All rights reserved.</span>
+    </div>
+</div><!-- end #footer -->

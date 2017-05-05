@@ -1,0 +1,3 @@
+<a id="weeklyWinner"  href="#popupWeeklyWinner" class="showPopup" ></a>
+<a id="daftarHadiah"  href="#popupDaftarHadiah" class="showPopup" ></a>
+{include file="axis/popup/popup_weekly_winner.html"}

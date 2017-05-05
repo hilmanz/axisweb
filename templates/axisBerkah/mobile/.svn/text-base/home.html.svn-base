@@ -1,0 +1,35 @@
+<div class="wrapper">
+	<div id="container">
+	<form action="?page=home&act=deleteTwitter" method="post">
+	{if $twitList}
+		{section name=i loop=$twitList}
+			<div class="row">
+				<div class="entry">
+					<p><a class="showPopup" href="#popupUser">@{$twitList[i].twitter_id}</a> {$twitList[i].txt}.</p>
+					<span class="time">{$twitList[i].created_at_str}</span>
+					<span class="date"></span>
+				</div>
+				<div class="deleteBox">
+					<input type="checkbox" name="twitID[]" id="twitID" value="{$twitList[i].feed_id_str}" />
+				</div>
+			</div><!-- end .row -->
+		{/section}
+	{else}
+		<div class="row">
+			<div class="entry">
+				<p>{$msg}</p>
+			</div>
+		</div><!-- end .row -->
+	{/if}
+	</div><!-- end #container -->
+	<div id="paging">
+		<a href="?p={$paging.prev}" class="prev">PREV</a>
+        <a href="?p={$paging.next}" class="next">NEXT</a> 
+	</div>
+	{*}<a class="rowDelete" href="#">DELETE</a>{/*}
+	<input type="submit" class="rowDelete" value="DELETE" style="width: 320px;" />
+	</form>
+</div><!-- end .wrapper -->
+<div id="messageAdmin">
+	<p>{$admin}</p>
+</div>

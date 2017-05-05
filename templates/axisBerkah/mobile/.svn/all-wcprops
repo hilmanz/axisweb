@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/axis/!svn/ver/437/trunk/web/templates/axisBerkah/mobile
+END
+footer.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/axis/!svn/ver/319/trunk/web/templates/axisBerkah/mobile/footer.html
+END
+mobile_login.html
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/axis/!svn/ver/437/trunk/web/templates/axisBerkah/mobile/mobile_login.html
+END
+gagal_login.html
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/axis/!svn/ver/342/trunk/web/templates/axisBerkah/mobile/gagal_login.html
+END
+mobile_landing.html
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/axis/!svn/ver/437/trunk/web/templates/axisBerkah/mobile/mobile_landing.html
+END
+meta.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/axis/!svn/ver/324/trunk/web/templates/axisBerkah/mobile/meta.html
+END
+header.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/axis/!svn/ver/395/trunk/web/templates/axisBerkah/mobile/header.html
+END
+home.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/axis/!svn/ver/352/trunk/web/templates/axisBerkah/mobile/home.html
+END
+master.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/axis/!svn/ver/437/trunk/web/templates/axisBerkah/mobile/master.html
+END

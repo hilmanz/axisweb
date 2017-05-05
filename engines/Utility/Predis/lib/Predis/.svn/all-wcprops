@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis
+END
+IReplyObject.php
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/IReplyObject.php
+END
+MonitorContext.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/MonitorContext.php
+END
+IConnectionParameters.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/IConnectionParameters.php
+END
+ClientException.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/ClientException.php
+END
+Autoloader.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Autoloader.php
+END
+IConnectionFactory.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/IConnectionFactory.php
+END
+Helpers.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Helpers.php
+END
+PredisException.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/PredisException.php
+END
+ResponseQueued.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/ResponseQueued.php
+END
+ResponseError.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/ResponseError.php
+END
+Client.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Client.php
+END
+IRedisServerError.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/IRedisServerError.php
+END
+ConnectionParameters.php
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/ConnectionParameters.php
+END
+CommunicationException.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/CommunicationException.php
+END
+ServerException.php
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/ServerException.php
+END
+NotSupportedException.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/NotSupportedException.php
+END
+ConnectionFactory.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/ConnectionFactory.php
+END

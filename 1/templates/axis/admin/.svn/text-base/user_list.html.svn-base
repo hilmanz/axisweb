@@ -1,0 +1,76 @@
+<div style="padding:10px;">
+<h2>User Management</h2>
+<hr>
+<form method="get" enctype="application/x-www-form-urlencoded">
+	<strong>Search by Name :&nbsp;</strong> 
+	<input type="text" name="name" value="" id="name"/>
+	<input type="submit" name="btn" value="Search" id="btn"/>
+	<input type="hidden" name="s" value="user_management"/>
+	<input type="hidden" name="search" value="1" id="statussearch"/>
+</form>
+{if $msg}
+<div style="color:red;">
+<h3>{$msg}</h3>
+</div>
+{/if}
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td width="10"><strong>No</strong></td>
+	<td width="10%"><strong>Gambar Photo</strong></td>
+	<td><strong>Userid</strong></td>
+	<td><strong>Name</strong></td>
+	<td width="15%"><strong>Posting</strong></td>
+	<td><strong>Point</strong></td>
+	<td><strong>Posting Date</strong></td>
+	<td><strong>Total Login</strong></td>
+	<td width="10%"><strong>Status</strong></td>
+	<td width="10%" colspan="2" align="center"><strong>Action</strong></td>
+	</tr>
+  {section name=i loop=$list}
+  <tr>
+    <td>{$list[i].no}</td>
+    <td>
+	{if $list[i].image == ''}
+	<a href="?s=user_management&act=edit_user&id={$list[i].id}&name={$name}&search={$search}&btn={$btn}&st={$st}&datefoto={$list[i].date_time}&userid={$list[i].user_id}" style="text-decoration:none">
+	<img src="{$img_path}" alt="" height="50" width="50" /></a>&nbsp;
+	{else}
+	<a href="?s=user_management&act=edit_user&id={$list[i].id}&name={$name}&search={$search}&btn={$btn}&st={$st}&datefoto={$list[i].date_time}&userid={$list[i].user_id}" style="text-decoration:none">
+	<img src="image_update/small_{$list[i].image}" alt="" height="50" width="50" /></a>&nbsp;
+	{/if}
+	</td>
+    <td>{$list[i].user_id}</td>
+    <td>{$list[i].nickname}</td>
+    <td>{$list[i].posting}</td>
+    <td>&nbsp;</td>
+    <td>{$list[i].posting_date|date_format} {$list[i].posting_date|date_format:$config.time}</td>
+    <td>{$list[i].tot_login}</td>
+    <td>{if $list[i].n_status eq 0}
+    	Tidak Aktif
+    	{else}
+    	Aktif
+    	{/if}
+	</td>
+    <td width="10%">
+		<a onclick="return confirm('Are you sure want to Delete this Status ?');" href="?s=user_management&act=delete_posting&id={$list[i].id}&name={$name}&search={$search}&btn={$btn}&st={$st}&datefoto={$list[i].posting_date}&userid={$list[i].user_id}" style="text-decoration:none" class="deletePage">Delete Posting</a>&nbsp;&nbsp;
+		<!-- <a onclick="return confirm('Are you sure want to delete this Posting ?');" href="?s=user_management&act=delete_posting&id={$list[i].id}&name={$name}&search={$search}&btn={$btn}&st={$st}" style="text-decoration:none" class="deletePage">Delete Posting</a>&nbsp;&nbsp; -->
+	</td>
+	<td width="10%">		
+		<a onclick="return confirm('Are you sure want to delete this Photo ?');" href="?s=user_management&act=delete_photo&id={$list[i].id}&name={$name}&search={$search}&btn={$btn}&st={$st}&datefoto={$list[i].date_time}&userid={$list[i].user_id}" style="text-decoration:none" class="deletePage">Delete Photo</a>&nbsp;&nbsp;
+	</td>
+	
+    </tr>
+  {/section}
+  {literal}
+	<script type="text/javascript">
+	function search_data(url){
+	var name = document.getElementById('name').value;
+	var statussearch = document.getElementById('statussearch').value;
+	var btn = document.getElementById('btn').value;
+		document.location.href = url+'&name='+name+'&search='+statussearch+'&btn='+btn;
+		return false;
+	}
+	</script>
+	{/literal}
+</table>
+<p>{$paging}</p>
+</div>

@@ -1,0 +1,13 @@
+<div id="newsTicker">
+    <a class="logoBerkah showPopup" href="{$berkahUrl}">&nbsp;</a>
+    <div class="newsTicker">
+        <div class="horizontal_scroller" id="no_mouse_events">
+            <div class="scrollingtext">
+			{section name=i loop=$news}
+                <span>{$news[i].description|strip_tags} &nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;&nbsp; </span>
+            {/section}
+            </div>
+        </div>
+    </div>
+    <div id="browserInfo">Untuk penggunaan optimal, gunakan <a href="https://www.google.com/intl/en/chrome/browser/">Google Chrome</a> atau <a href="http://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a></div>
+</div><!-- end #newsTicker -->

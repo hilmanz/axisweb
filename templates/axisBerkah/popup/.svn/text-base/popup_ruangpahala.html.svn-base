@@ -1,0 +1,39 @@
+<div id="popupContentAxis" class="popupContainer">
+    <div id="popupContent">
+    	<div class="popupTop">
+         <h1 style="">AXIS Content</h1>
+       	 <a class="closePopup" href="#">X</a>
+        </div>
+        <div class="poupContent popupWeeklyWinner">
+        		<div class="styleTable" id="rowsContent">
+                  
+                </div>
+				
+				 {*}<table cellspacing="0" cellpadding="0">
+                    <tbody>
+					{assign name="n" value=1}
+					{section name=i loop=$content}
+						  <tr>
+							<td>{$n++}</td>
+							<td>{$content[i].name}</td>
+							<td>{$content[i].description}</td>
+							<td><a  class="showPopupBeli" href="#popupPSConfirm"  items_id="{$content[i].id}" title="{$content[i].name}" >BELI</a></td>
+							<td>{$content[i].content_prize}</td>
+						  </tr>
+				
+                    {/section}
+                      </tbody>
+                    </table>
+					{/*}
+        </div><!-- end .poupContent -->
+    </div><!-- end #poupContent -->
+</div><!-- end .popupContainer -->
+
+<script>
+var gud = '{$getUserData}';
+var pc ='{$purchaseContent}';
+var gvc ='{$getVerificationCode}';
+var vc ='{$validationCode}';
+
+</script>
+

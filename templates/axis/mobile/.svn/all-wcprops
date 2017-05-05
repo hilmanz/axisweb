@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/axis/!svn/ver/438/trunk/web/templates/axis/mobile
+END
+footer.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/axis/!svn/ver/199/trunk/web/templates/axis/mobile/footer.html
+END
+mobile_login.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/axis/!svn/ver/438/trunk/web/templates/axis/mobile/mobile_login.html
+END
+meta.html
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/axis/!svn/ver/268/trunk/web/templates/axis/mobile/meta.html
+END
+updatestatus.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/axis/!svn/ver/96/trunk/web/templates/axis/mobile/updatestatus.html
+END
+mobile.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/axis/!svn/ver/199/trunk/web/templates/axis/mobile/mobile.html
+END
+header.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/axis/!svn/ver/87/trunk/web/templates/axis/mobile/header.html
+END
+home.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/axis/!svn/ver/95/trunk/web/templates/axis/mobile/home.html
+END
+master.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/axis/!svn/ver/275/trunk/web/templates/axis/mobile/master.html
+END
+mobile_dislike.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/axis/!svn/ver/275/trunk/web/templates/axis/mobile/mobile_dislike.html
+END

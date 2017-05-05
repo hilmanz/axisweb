@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Iterators
+END
+MultiBulkResponseSimple.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Iterators/MultiBulkResponseSimple.php
+END
+MultiBulkResponseTuple.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Iterators/MultiBulkResponseTuple.php
+END
+MultiBulkResponse.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Iterators/MultiBulkResponse.php
+END

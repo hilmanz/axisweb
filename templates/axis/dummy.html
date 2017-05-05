@@ -1,0 +1,106 @@
+ <html>
+    <head>
+      <title>Test Login</title>
+      <script type="text/javascript" src="js/jquery.js"></script>
+      <script>
+      var at = '{$access_token}';
+      var service_url="{$service_url}";
+      {literal}
+      function log_like(){
+          /*
+        	$.ajax({
+      		  url: service_url+"?service=facebook&m=like&access_token="+at,
+      		  dataType: 'json',
+      		  success: function( response ) {
+      		  
+      		}
+      		
+        });
+          */
+      }
+       {/literal}
+      </script>
+    
+    </head>
+    <body>
+      <div id="fb-root"></div>
+      {if $userId eq ""}
+      <div class="fb-login-button" scope="email,user_likes,read_friendlists,user_about_me,user_location,publish_stream,user_relationships">Login with Facebook</div>
+      {else}
+      <div>
+      Hello, {$me.name}</div>
+      <div>
+      <img src="http://graph.facebook.com/{$userId}/picture/"/>
+      </div>
+      {/if}
+      {if $page_liked}
+	      <script>log_like();</script>
+	      <div>
+	     	 user has liked the page
+	      </div>
+	       <div>
+	      {section name=i loop=$friends}
+	      	<p>{$friends[i].friend_name}</p>
+	      {/section}
+	      </div>
+      		<div>
+      		<a href="http://preview.kanadigital.com/axis/public_html/index.php?fb_id={$userId}" target="_blank">Lanjut</a>
+      		</div>
+      {else}
+	      <div>
+	       <p>like dulu sebelum bisa ikutan :D</p> 
+	      </div>
+      {/if}
+     
+      
+     
+      <script>
+      var _appID = '{$appId}';
+      
+      {literal}
+      
+      
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : _appID, // App ID
+            channelUrl : 'http://preview.kanadigital.com/axis/fb/channel.html', // Channel File
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
+          });
+          FB.Event.subscribe('auth.login', function(response) {
+              window.location.reload();
+          });
+          FB.Event.subscribe('edge.create',
+      		    function(response) {
+		        	  $.ajax({
+		        		  url: service_url+"?service=facebook&m=like&access_token="+at,
+		        		  dataType: 'json',
+		        		  success: function( response ) {
+		        		  
+		        		}
+		        	});
+      		        
+      		    }
+      		);
+        };
+        FB.login(function(response) {
+        	   if (response.authResponse) {
+        	    	console.log("redirect ke website");
+        	   } else {
+        	     console.log('Maaf, kamu harus mengijinkan Axis Barokah untuk mengakses data kamu terlebih dahulu.');
+        	   }
+        	 }, {scope: 'email,user_likes,read_friendlists,user_about_me,user_location,publish_stream,user_relationships'});
+        // Load the SDK Asynchronously
+        (function(d){
+           var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           ref.parentNode.insertBefore(js, ref);
+         }(document));
+        {/literal}
+        
+      </script>
+    </body>
+ </html>

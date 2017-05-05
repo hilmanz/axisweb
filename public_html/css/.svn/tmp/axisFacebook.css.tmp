@@ -1,0 +1,86 @@
+/*
+Theme Name: AXIS BAROKAH
+Version: 1.0
+Author: ACIT JAZZ - 2012
+*/
+@import url('reset.css');
+@import url('../font/flamacondensed.css');
+
+@import url(http://fonts.googleapis.com/css?family=Voces);
+@import url(http://fonts.googleapis.com/css?family=Comfortaa:400,300,700);
+
+body {
+	font-size:16px;
+	line-height:1.4;
+	letter-spacing:0.01em;
+	color:#fff;
+    font-family: 'Voces',arial;
+}
+a {
+	outline:none;
+	color:#ad469c;
+	text-decoration:none;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+a:hover{
+	color:#ff00d5;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+
+#facebookTab{
+	width:790px;
+	margin:0 auto;
+}
+#facebookTabLike{
+	background:url(../img/barokah_like.jpg) no-repeat;
+	width:790px;
+	margin:0 auto;
+	height:800px;
+	position:relative;
+}
+#totalGabung{
+	bottom: 71px;
+    font-size: 61px;
+    left: 74px;
+    position: absolute;
+	text-shadow:0 1px 2px #9c7500;
+}
+#totalGabung h1{
+	width:152px;
+	font-size:40px;
+	text-align:center;
+    font-family: 'Comfortaa';
+	font-weight:bold;
+}
+#content{
+	bottom: 46px;
+    left: 260px;
+    position: absolute;
+	color:#663366;
+}
+#content p{
+	margin:0 10px 10px 0;
+	font-size:12px;
+}
+#btnLanjut{
+	bottom: 78px;
+    color: #FFFFFF;
+    font-size: 30px;
+    position: absolute;
+    right: 92px;
+    text-decoration: none;
+	font-weight:bold;
+    font-family: 'Comfortaa';
+}
+#btnLanjut:hover{
+	color:#a51f76;
+}

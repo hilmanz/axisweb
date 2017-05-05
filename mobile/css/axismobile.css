@@ -1,0 +1,253 @@
+/*
+Theme Name: AXIS BAROKAH
+Version: 1.0
+Author: ACIT JAZZ - 2012
+*/
+@import url('reset.css');
+@import url('../font/flamacondensed.css');
+
+@media all{
+body {
+	background:url(../img/mobile/bg.gif) #a51f76 repeat;
+	font-size:14px;
+	line-height:1.4;
+	letter-spacing:0.01em;
+	color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	margin:10px;
+}
+a {
+	outline:none;
+	color:#ad469c;
+	text-decoration:none;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+#bodyLogin{
+	background:url(../img/mobile/logobarokah2.png) center top no-repeat;
+		padding:400px 0 0 0;
+		position:relative;
+		height:200px;
+}
+#fbLogin{
+	background:url(../img/mobile/fb_login.png) no-repeat;
+	display:block;
+	width:246px; height:83px;
+	margin:0 auto;
+	position:relative;
+}
+.logoAxis{
+	background:url(../img/mobile/logo.png) no-repeat;
+	display:block; width:134px; height:52px;
+}
+a:hover{
+	color:#ff00d5;
+}
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+
+#container{
+	background:#9c06ea;
+	padding:10px;
+}
+#top{
+	padding:10px 0;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	font-size:16px;
+	position:absolute;
+	right:0;
+	z-index:100;
+}
+.welcome{
+	padding:10px 0 0 0;
+	display:block;
+	float:left;
+	font-size:22px;
+}
+.btnYellow{
+    font-family: 'FlamaCondensedBookRegular',arial;
+	background:#fbb812;
+	padding:5px 10px;
+	text-transform:uppercase;
+	color:#7116a2;
+}
+.btnYellow:hover{
+	color:#7116a2;
+	background:#F90;
+}
+#top .btnYellow{
+	float:right;
+}
+.row{
+	overflow:hidden;
+	padding:10px 0;
+	clear:both;
+}
+#container .row{
+	border-bottom:solid 1px #65009b;
+}
+.thumb{
+	width:48px; height:48px;
+	float:left;
+	margin:0 10px 0 0;
+}
+.entry{
+	margin:0 0 0 55px;
+}
+.entry a{
+	color:#fff;
+	font-weight:bold;
+}
+#updateStatus{
+	background:#fcb813;
+	padding:0 10px;
+	margin:20px 0;
+}
+#updateStatus label{
+	display:block;
+	color:#4c2478;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	font-size:30px;
+}
+.maxChar{
+	display:block;
+	float:right;
+	display:block;
+	color:#4c2478;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	font-size:20px;
+	line-height:42px;
+}
+#updateStatus textarea,.message_status{
+	background:#7116a2;
+	resize:none;
+	padding:10px;
+	color:#fff;
+	font-size:16px;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	border:none;
+	width:100%;
+}
+#updateStatus input[type=text]{
+	background:#7116a2;
+	border:none;
+	width:100%;
+	color:#fff;
+	font-size:16px;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	padding:10px;
+}
+.rowSubmit{
+	padding:10px 0;
+	border-top:solid 1px #7116a2;
+	text-align:center;
+}
+.submitStatus,.submitLogin{
+	background:none;
+	border:none;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	font-size:30px;
+	color:#7116a2;
+	width:auto;
+	cursor:pointer;
+	margin:0 auto;
+	padding:0;
+}
+#paging{
+	background:#b058d0;
+	padding:0 0;
+	overflow:hidden;
+}
+#paging a{
+    font-family: 'FlamaCondensedBookRegular',arial;
+	background:#fbb812;
+	padding:5px 15px;
+	text-transform:uppercase;
+	color:#7116a2;
+	font-size:20px;
+}
+#paging a:hover{
+	background:#F90;
+}
+.prev{
+	float:left;
+}
+.next{
+	float:right;
+}
+.centerText{
+	text-align:center;
+}
+.msgBox{
+	color:#FCB813;background:#7116A2;background: none repeat scroll 0 0 #7116A2;display: block;margin: 25px auto 0;padding: 14px;text-align: center;
+}
+#messageAdmin{
+	background:#fff;
+	padding:20px 10px;
+	text-align:center;
+	color:#a51f76;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	font-size:18px;
+}
+#footer{
+	color:#fff;
+	font-size:12px;
+	padding:10px 0;
+}
+#footer a{
+	color:#fff;
+}
+.loginMessage{
+	background:#fcb813;
+	padding:20px 10px;
+	text-align:center;
+	text-transform:uppercase;
+	margin:20px 0;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	font-size:18px;
+	color:#4e2c7a;
+}
+}
+@media all and (max-width: 1024px){
+	#bodyLogin{
+		padding:500px 0 0 0;
+		position:relative;
+		height:200px;
+	}
+	#footer{
+		padding:0;
+		font-size:11px;
+	}
+	#fbLogin{
+		top:0;	
+	}
+}
+@media all and (max-width: 420px){
+	#bodyLogin{
+		background:url(../img/mobile/logobarokah.png) center top no-repeat;
+		padding:340px 0 0 0;
+		position:relative;
+		height:100px;
+	}
+	#fbLogin{
+		background:url(../img/mobile/fb_login_small.png) no-repeat;
+		width:180px; height:61px;
+		position:relative;
+		top:0;	
+	}
+	.logoAxis{
+		background:url(../img/mobile/logo_small.png) no-repeat;
+		width:100px; height:39px;
+	}
+	#footer{
+		padding:0;
+		font-size:11px;
+	}
+}

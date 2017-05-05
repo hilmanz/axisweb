@@ -1,0 +1,37 @@
+<div id="obrolan">
+	<div class="obrolan">
+		<h1>Obrolan Meja Makan</h1>
+		{literal}
+			<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+			<script>
+			new TWTR.Widget({
+			  version: 2,
+			  type: 'search',
+			  search: '@AXISgsm',
+			  interval: 30000,
+			  title: '',
+			  subject: 'OBROLAN MEJA MAKAN',
+			  width: 'auto',
+			  height: 205,
+			  theme: {
+				shell: {
+				  background: '#f0ebeb',
+				  color: '#940f94'
+				},
+				tweets: {
+				  background: '#ffffff',
+				  color: '#444444',
+				  links: '#940f94'
+				}
+			  },
+			  features: {
+				scrollbar: true,
+				loop: true,
+				live: true,
+				behavior: 'default'
+			  }
+			}).render().start();
+			</script>
+		{/literal}
+	</div><!-- end .obrolan -->
+</div>

@@ -1,0 +1,23 @@
+<div id="popupPushSelling" class="popupContainer">
+    <div id="popupContent">
+    	<div class="popupTop">
+        <h1>Klik Beli untuk download konten dan ikuti instruksinya</h1>
+       	 <a class="closePopup" href="#">X</a>
+        </div>
+        <div class="poupContent popupWeeklyWinner">
+             <div class="scrollbar scroll-pane" style=" width:760px; height:450px;">
+           		 <div style="min-height:450px">
+             	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table">		 
+				 {section name=i loop=$itemsSelling}
+                  <tr>
+                    <td class="name">{$itemsSelling[i].name}</td>
+                    <td class="point">{$itemsSelling[i].content_prize}</td> 
+                    <td class="beli"><a href="#popupPSConfirm" class="showPopupBeli btnBeli" items_id="{$itemsSelling[i].id}">BELI</a></td>
+                  </tr>
+                 {/section}
+                </table>
+                </div>
+             </div><!-- end .scrollbar -->
+        </div><!-- end .poupContent -->
+    </div><!-- end #poupContent -->
+</div><!-- end .popupContainer -->

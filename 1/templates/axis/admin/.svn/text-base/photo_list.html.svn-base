@@ -1,0 +1,34 @@
+<div style="padding:10px;">
+<h2>Photo Management</h2>
+<hr>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td width="10"><strong>ID</strong></td>
+	<td width="30%"><strong>Gambar Photo</strong></td>
+	<td><strong>Userid</strong></td>
+	<td><strong>Status</strong></td>
+	<td width="10%"><strong>Action</strong></td>
+	</tr>
+  {section name=i loop=$list}
+  <tr>
+    <td>{$list[i].id}</td>
+    <td><img src="{$img_path}" alt="" height="42" width="42" />&nbsp;</td>
+    <td>{$list[i].user_id}</td>
+    <td>{if $list[i].n_status eq 2}
+    	Tidak Aktif
+    	{else}
+    	Aktif
+    	{/if}</td>
+    <td>
+	{if $list[i].n_status eq 2}
+	<a onclick="return confirm('Are you sure want to approve this Photo ?');" href="?s=user_management&act=delete_photo&id={$list[i].id}" style="text-decoration:none" class="deletePage">Approve</a>
+	{else}
+	<a onclick="return confirm('Are you sure want to delete this Photo ?');" href="?s=user_management&act=delete_photo&id={$list[i].id}" style="text-decoration:none" class="deletePage">Delete</a>
+	{/if}
+	</td>
+	
+    </tr>
+  {/section}
+</table>
+<p>{$paging}</p>
+</div>

@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{$mustRegister} -  AXIS BAROKAH - GSM YANG BAIK</title>
+<link rel="shortcut icon" href="{$baseUrl}img/favicon.ico">
+<link rel="apple-touch-icon" href="{$baseUrl}img/favicon.png">
+</head>
+
+<body>
+<link rel="stylesheet" type="text/css" href="{$baseUrl}css/axisFacebook.css" />
+<link rel="stylesheet" type="text/css" href="{$baseUrl}css/jscrollpane.css" />
+<link rel="stylesheet" type="text/css" href="{$baseUrl}css/scrollbar.css">
+<script type="text/javascript" src="{$baseUrl}js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="{$baseUrl}js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="{$baseUrl}js/jquery.jscrollpane.min.js"></script>
+<script type="text/javascript">
+
+	  var at = '{$access_token}';
+      var service_url="{$service_url}";
+      {literal}
+      function log_like(){
+          /*
+        	$.ajax({
+      		  url: service_url+"?service=facebook&m=like&access_token="+at,
+      		  dataType: 'json',
+      		  success: function( response ) {
+      		  
+      		}
+      		
+        });
+          */
+      }
+    
+$(function()
+{
+	$('.scrollbar')
+		.jScrollPane(
+			{
+				showArrows:false
+			}
+		);
+});
+
+       {/literal}
+   
+</script>
+	
+	<div id="fb-root"></div>
+		{if $page_liked}  
+		<script>
+		var token = "{$liked_token}";
+		</script>
+			<div id="facebookTabLike">
+            	{*}
+				<div id="totalGabung">
+					<h1>{$userStat}</h1>
+				</div>
+				<div id="content">
+					<div class="scrollbar scroll-pane" style="width:260px; height:104px;">
+                        <div style="height:600px">
+                        <p>AXIS Barokah merupakan acara buka puasa online terakbar. Siapapun boleh ikutan selama punya akun Facebook yang aktif untuk bergabung. Mau gabung dari komputer boleh, dari smartphone OK, dari gadget lain juga OK asalkan tersambung dengan AXIS Barokah dan udah mendaftar ya Beb.</p>
+            <p>AXIS Barokah sesuai dengan namanya bakalan bagi-bagi Barokah buat Bebep yang ikutan di acara online akbar ini. Nah yang udah gabung bisa cari paket-paket Barokah yang tersebar di sepanjang acara buka puasa online ini. Ingat ya, hanya sepanjang waktu buka puasa Beb. Kalau udah lewat yaaa tunggu besok dong Beb. </p>
+                    <p>AXIS Barokah tentu saja punya aturan main. Makanya pastiin akun Facebook Bebep aktif dan data yang diberikan juga 100% data asli Beb. Sayang kan kalau Bebep udah susah-susah usaha buat dapat Barokah tapi enggak bisa diklaim? Oh ya Beb, hati-hati sama penipuan ya karena yang dapat Barokah bakalan dihubungi langsung sama AXIS.</p> 
+            <p>AXIS Barokah 100% cuma mau ngasih Bebep sedikit Barokah Ramadhan tapi keputusan dari AXIS gak bisa diganggu gugat ya.</p>
+                        </div>
+					</div><!-- end .scrollbar -->
+				</div>
+				{if $userId}
+					{if $mustRegister}
+					<a href="{$registerUrl}?fb_id={$userId}" id="btnLanjut" target="_blank">LANJUT</a>
+					{else}
+						<a href="{$baseUrl}fb/connect.php?fb_id={$userId}&mem_id={$memberId}&cookies={$cookies}" id="btnLanjut" target="_blank">LANJUT</a>
+					{/if}
+				{else}
+					<a href="#" id="btnLanjut" onclick="authorize('{$lanjutUrl}');return false;">LANJUT</a>
+				{/if}
+                {/*}
+			</div><!-- end #facebookTab -->
+		{else}
+		<script>
+		var token = "";
+		</script>
+		<div id="facebookTab">
+			<img src="{$baseUrl}img/barokah_no_like.jpg" />
+		</div><!-- end #facebookTab -->
+		{/if}
+	
+
+  <script>
+		  var _appID = '{$appId}';
+		  var baseUrl = '{$baseUrl}';
+		  {literal}
+		  
+		  
+			window.fbAsyncInit = function() {
+			  FB.init({
+				appId      : _appID, // App ID
+				channelUrl : baseUrl+'fb/channel.html', // Channel File
+				status     : true, // check login status
+				cookie     : true, // enable cookies to allow the server to access the session
+				xfbml      : true  // parse XFBML
+			  });
+			  /*FB.Event.subscribe('auth.login', function(response) {
+				  
+			  });*/
+			  FB.Event.subscribe('edge.create',
+					function(response) {
+						  $.ajax({
+							  url: service_url+"?service=facebook&m=like&access_token="+at,
+							  dataType: 'json',
+							  success: function( response ) {
+							  
+							}
+						});
+						
+					}
+				);
+			};
+				 
+			// Load the SDK Asynchronously
+			(function(d){
+			   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+			   if (d.getElementById(id)) {return;}
+			   js = d.createElement('script'); js.id = id; js.async = true;
+			   js.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + "connect.facebook.net/en_US/all.js";
+			   ref.parentNode.insertBefore(js, ref);
+			 }(document));
+			function authorize(lanjutUrl){
+				FB.login(function(response) {
+		        	   if (response.authResponse) {
+			        	   top.location = lanjutUrl+"?fb_id="+response.authResponse.userID+"&t="+token;
+		        	    	return false;
+		        	   } else {
+		        	     console.log('Maaf, kamu harus mengijinkan Axis Barokah untuk mengakses data kamu terlebih dahulu.');
+		        	   }
+		        	 }, {scope: 'email,user_likes,read_friendlists,user_about_me,user_location,publish_stream,user_relationships'});
+			}
+
+			{/literal}
+			
+	</script>
+{literal}
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-867847-38']);
+  _gaq.push(['_setDomainName', 'tangkapberkahaxis.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+{/literal}
+</body>
+</html>

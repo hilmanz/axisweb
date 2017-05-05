@@ -1,0 +1,255 @@
+<div class="wrapper">
+	<div id="container">
+		<div id="failTweet">
+			<div class="failTweet">
+				 <div class="headTweet">
+					<h1 class="userName">{$uID[0].name}</h1>
+					<span class="nickname">@{$uID[0].twitter_id}</span>
+				 </div>
+				 <div class="contentTweet">
+					 {if $twitList}
+                         <div id="twitList" class="scrollbar scroll-pane wide6 tall6">
+                             {section name=i loop=$twitList}
+                                <div id="{$twitList[i].feed_id_str}" class="row">
+                                    <a class="thumb showPopup" href="#popupUser"><img src="{$pic}" /></a>
+                                    <div class="entry">
+                                        <p><a class="showPopup" href="#popupUser">@{$twitList[i].twitter_id}</a>{$twitList[i].txt}.</p>
+                                        <span class="time">{$twitList[i].created_at_str}</span>
+                                        <span class="date"></span>
+                                    </div>
+                                    <div class="chek"><input class="twitCheck" type="checkbox" no="{$twitList[i].feed_id_str}" /></div>
+                                </div><!-- end .row -->
+                             {/section}
+                         </div><!-- end .scrollbar -->
+					 {elseif $checkTweet < 2}
+					 	<div class="loaderBox" align="center">
+					 		<img src="img/loaders.gif">
+					 		<script type="text/javascript">
+					 			interval = setInterval("refresh_tweet()",10000);
+					 		</script>
+					 	</div>
+					 {else}
+						<div class="bersih">
+                        <p>WOW! ternyata twitter kamu sudah fitri! Memang jarang ngucapin kata-kata khilaf ya beb?</p>
+                        <a href="?page=ruangPahala" >Klik di sini ya beb.. <br />
+						untuk masuk ke Ruang Pahala</a>
+                        </div>
+					 {/if}
+				</div>
+			</div><!-- end .failTweet -->
+		</div><!-- end #failTweet -->
+        {if $twitList}
+		<div id="sideBar">
+			<div class="sideBar">
+				
+				<div id="boxMessage">
+					 <h1>Buseeet...!<br /> Kamu punya kata-kata khilaf <br />
+						sebanyak {$sisaKotor} tweet.<br />Buruan deh dihapus!</h1>
+					
+					 
+				</div>
+				{if $twitList}<a href="javascript:return false;" id="hapusTweet">DELETE</a>{/if}
+				
+
+				<div id="pushSelling">
+					<div class="pushSelling">
+						<h1><a href="javascript:void(0)" class="getRamadhanPaket showPopup">Klik di sini untuk paket Ramadhan AXIS</a></h1>
+					</div>
+				</div><!-- end #pushSelling -->
+			</div>
+		</div>
+		{elseif $checkTweet < 2}
+		<div id="sideBar">
+			<div class="sideBar">
+				
+				<div id="boxMessage">
+					 <h1>Sebentar ya Beb. Kita lagi cari tweet khilaf yang ada di timeline kamu</h1>
+				</div>
+				<a href="javascript:return false;" id="hapusTweet" style="display:none;">DELETE</a>
+				
+
+				<div id="pushSelling">
+					<div class="pushSelling">
+						<h1><a href="javascript:void(0)" class="getRamadhanPaket showPopup">Klik di sini untuk paket Ramadhan AXIS</a></h1>
+					</div>
+				</div><!-- end #pushSelling -->
+			</div>
+		</div>
+       	{else}
+		 <div id="sideBarBlank">
+			<div class="sideBar">
+				
+				<div id="boxMessage">
+        	 		<h1>Kamu tidak punya kata-kata khilaf</h1>
+				</div>
+				<div id="pushSelling">
+					<div class="pushSelling">
+						<h1><a href="javascript:void(0)" class="getRamadhanPaket showPopup">Klik di sini untuk paket Ramadhan AXIS</a></h1>
+					</div>
+				</div><!-- end #pushSelling -->
+			</div>
+         </div>
+        {/if}
+		<a href="{$landing_barokah}" class="logoBarokah">&nbsp;</a>
+	</div><!-- end #container -->
+</div><!-- end .wrapper -->
+
+
+
+{include file="axisBerkah/popup/popup_ruangpahala.html"}
+{include file="axisBerkah/popup/popupMessages.html"}
+{include file="axisBerkah/popup/popup_ps_confirm.html"}
+{include file="axisBerkah/popup/popup_ps_failure.html"}
+
+<script>
+var gud = '{$getUserData}';
+var pc ='{$purchaseContent}';
+var gvc ='{$getVerificationCode}';
+var vc ='{$validationCode}';
+{literal}
+$(".getRamadhanPaket").click(function(){
+	$('#rowsContent').html( '<span style="color:black"><h4>tunggu ya bep, lagi di cari ni berkah nya..</h4></span>' );
+	var targetID = "#popupContentAxis";
+	$.post('?page=paketRamadhan&act=getContentsByID', function(data){
+		
+		if(data){
+			var html = '';
+			var no = 1;
+			html +='<table cellspacing="0" cellpadding="0">';
+            html +='        <tbody>';
+			for(var i in data){
+				
+				html +='			  <tr>';
+				html +='				<td>'+no+'</td>';
+				html +='				<td>'+data[i].name+'</td>';
+				html +='				<td>'+data[i].description.replace(/\|/gi,"<br />"); +'</td>';
+				html +='				<td>'+data[i].content_prize+'</td>';
+				html +='				<td><a  class="showPopupBeli" href="#popupPSConfirm"  items_id="'+data[i].id+'">BELI</a></td>';
+				html +='			  </tr>';
+				no++;
+			}
+            html +='          </tbody>';
+            html +='        </table>';
+			$('#rowsContent').html(html);
+			
+		$(".showPopupBeli").click(function(){
+			var targetID = $(this).attr('href');
+			var item_id = $(this).attr('items_id');
+				
+		
+			$.post('index.php?'+gud, function(data) {
+				//console.log(data);
+				if(data.response==2){
+				
+					$('.messagePSConfirm').html(data.status);
+			
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupPSConfirmMessage").fadeIn();
+					$("#popupPSConfirmMessage").addClass('visible');
+					$("#bgPopup").fadeIn();	
+										
+				}				
+				if(data.response==0){
+					
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupPSConfirm").fadeIn();
+					$("#popupPSConfirm").addClass('visible');
+					$("#bgPopup").fadeIn();		
+					
+				}
+				if(data.response==1){
+					var htmlPaidContent = '<h1>Mau download konten ini?</h1>';
+					 htmlPaidContent += '<h2>Cek SMS dari AXIS di HP kamu, dan ikuti petunjuknya, ya!</h2>';
+					 
+					$.post('index.php?'+pc,{item_id:item_id} ,function(data) {
+						if(data.response==1) htmlPaidContent = data.message;
+					});
+					
+					$('.messagePSConfirm').html(htmlPaidContent);
+			
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupPSConfirmMessage").fadeIn();
+					$("#popupPSConfirmMessage").addClass('visible');
+					$("#bgPopup").fadeIn();		
+				
+				}
+			});
+			
+	
+	});
+	
+	
+	$("#sendVerCodeTOSMS").click(function(){
+		$('#sendVerCodeTOSMS').html('tunggu ya sampai sms nya terkirim...');
+		$.post('index.php?'+gvc, function(data) {
+			if(!data){
+					var htmlSuccessVerified ='Bep, Sori nih kodenya salah <br /> Coba lagi ya bep';
+					$(".popupTextMessage").html(htmlSuccessVerified);
+									
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupMessages").fadeIn();
+					$("#popupMessages").addClass('visible');
+					$("#bgPopup").fadeIn();				
+				}
+		
+			$('#sendVerCodeTOSMS').html('SUDAH terkirim ya..');
+		});
+	
+	});
+	
+	
+	$('#sendVerCode').click(function(){
+		var verCode = $("#verCode").val();
+		$.post('index.php?'+vc, { code: verCode}, function(data) {
+			if(data.response==1){
+					var htmlSuccessVerified ="<h1>Selamat ya Beb!<br />";
+						htmlSuccessVerified += "Nomor Kamu udah Terverifikasi<br />";
+						htmlSuccessVerified += "Kalau kamu ada kendala atau pertanyaan, kamu bisa email ke : hemat@axisworld.co.id</h1>";
+					$(".messagePSConfirm").html(htmlSuccessVerified);
+									
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupPSConfirmMessage").fadeIn();
+					$("#popupPSConfirmMessage").addClass('visible');
+					$("#bgPopup").fadeIn();		
+					
+				}else {
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+						$("#popupPSFailure").fadeIn();
+						$("#popupPSFailure").addClass('visible');
+						$("#bgPopup").fadeIn();	
+				
+				}
+		
+			
+		});
+	
+	});
+	
+		}
+	
+	});
+	$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+	$(targetID).fadeIn();
+	$(targetID).addClass('visible');
+	$("#bgPopup").fadeIn();	
+});
+
+
+
+</script>
+
+{/literal}

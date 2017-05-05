@@ -1,0 +1,52 @@
+<div id="popupDaftarHadiah" class="popupContainer" style="display:block">
+    <div id="popupContent">
+    	<div class="popupTop">
+         <h1>HADIAH BAROKAH</h1>
+       	 <a class="closePopup" href="#">X</a>
+        </div>
+        <div class="poupContent" style="padding:0;">
+        	<table width="100%" border="0" cellspacing="0" cellpadding="0" id="tableDaftarHadiah">
+              <tr>
+                <td valign="top" width="220"><img src="img/hadiahlebaran.png" /></td>
+                <td valign="top">
+                	<h3>Barokah Lebaran (Grand Prize)</h3>
+                    <ul>
+                    	<li>1 iPad 3 Wifi + 4G 32 GB</li>
+                    </ul>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" width="220"><img src="img/hadiahmingguan.png" /></td>
+                <td valign="top">
+                    <h3>Barokah Mingguan</h3>
+                    <ul>
+                    <li>1 HTC One V / minggu</li>
+                    <li>1 Nokia Lumia 610 / minggu</li>
+                    <li>1 Samsung Galaxy Pocket Y / minggu</li>
+                    <li>1 ZTE Racer II / minggu</li>
+                    <li>1 Modem Alcatel X080S / minggu</li>
+                    </ul>
+                </td>
+              </tr>
+              <tr>
+                <td valign="top" width="220"><img src="img/vocer.png" /></td>
+                <td valign="top">
+                    <h3>Barokah Harian (kado di atas meja)</h3>
+                    <ul>
+                    <li>Voucher belanja online</li>
+                    <li>Pulsa gratis AXIS</li>
+                    <li>Konten Keren dari AXIS</li>
+                    </ul>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                    <h3>Cara dapetin hadiah:</h3>
+                     <p>Barokah harian bisa didapatkan dengan scroll ke kanan kiri untuk cari icon kado di atas meja panjang,
+                       Barokah Mingguan dan Lebaran Bisa didapatkan dengan rajin-rajin login setiap hari dan download konten untuk dapatkan poin </p>
+                </td>
+              </tr>
+            </table>
+        </div><!-- end .poupContent -->
+    </div><!-- end #poupContent -->
+</div><!-- end .popupContainer -->

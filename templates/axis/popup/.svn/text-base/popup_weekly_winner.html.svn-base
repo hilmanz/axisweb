@@ -1,0 +1,66 @@
+<div id="popupWeeklyWinner" class="popupContainer" style="display:block; top:-100%; margin:0 0 0 -290px;">
+    <div id="popupContent">
+    	<div class="popupTop">
+       	 <a class="closePopup" href="#">X</a>
+        </div>
+        <div class="poupContent popupWeeklyWinner" style="text-align:center;">
+        	 <div class="headTitle">
+                <span class="stars"></span>
+                <h1 style="font-size:18px; border-bottom:solid 2px #fff; padding:10px 0 10px 0 ">DAFTAR PEMENANG HADIAH MINGGUAN</h1>
+             </div>
+                    <h3 class="titleWinner">Periode 24 July - 31 July 2012</h3>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table tableWinner">
+                        <tr><td>Gobul Kelen dapat HTC one V  (Point 4145)</td></tr>
+                        <tr><td>Benny Wahyudi dapat Nokia Lumia 610 (Point 3100)</td></tr>
+                        <tr><td>Raisani Rusli dapat Samsung Galaxy Pocket Y (Point 2600)</td></tr>
+                        <tr><td>Ni Nay dapat ZTE Racer II (Point 1205)</td></tr>
+                        <tr><td>Smart Carlos dapat Modem Alcatel X080S (Point 1175)</td></tr>
+                    </table>
+                    <h3 class="titleWinner">Periode 01 Agustus - 07 Agustus 2012</h3>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table tableWinner">
+                        <tr><td>Isdy Syahdan Syifan dapat HTC one V (Point 13315)</td></tr>
+                        <tr><td>Ani Arniza dapat Nokia Lumia 610 (Point 11055)</td></tr>
+                        <tr><td>Jhoni Bravontal dapat Samsung Galaxy Pocket Y (Point 3820)</td></tr>
+                        <tr><td>Yudono Fixens Ra dapat ZTE Racer II (Point 2395)</td></tr>
+                        <tr><td>Zul Fee Vickar dapat Modem Alcatel X080S (Point 2250)</td></tr>
+                    </table>
+                    <h3 class="titleWinner">Periode 08 Agustus - 14 Agustus 2012</h3>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="table tableWinner">
+                        <tr><td>Doni Riyanto dapat HTC one V (Point 45015)</td></tr>
+                        <tr><td>Hanindy Fajrina dapat Nokia Lumia 610 (Point 43030)</td></tr>
+                        <tr><td>Gita Taa Puspa dapat Samsung Galaxy Pocket Y (Point 27420)</td></tr>
+                        <tr><td>Vie Vha dapat ZTE Racer II (Point 13645)</td></tr>
+                        <tr><td>Anisa Chazha Icha dapat Modem Alcatel X080S (Point 4980)</td></tr>
+                    </table>
+                     <p style="margin:10px 0 0 0; font-size:18px; text-align:center; border-top:solid 2px #fff; padding:10px 0 0 ;">
+                     	Jangan lupa data kamu paling lambat diterima tanggal 24 Agustus 2012 yah beb!<br />
+						Hadiah akan dikirim pada tanggal 27 Agustus 2012</p>
+        </div><!-- end .poupContent -->
+    </div><!-- end #poupContent -->
+</div><!-- end .popupContainer -->
+{*}<div id="popupWeeklyWinner" class="popupContainer smallPopup" style="display:block; top:-100%; margin:0 0 0 -290px;">
+    <div id="popupContent">
+    	<div class="popupTop">
+       	 <a class="closePopup" href="#">X</a>
+        </div>
+        <div class="poupContent popupWeeklyWinner">
+        	 <div class="headTitle">
+                <span class="stars"></span>
+                <h1 style="font-size:18px; border-bottom:solid 2px #fff; padding:10px 0 10px 0 ">DAFTAR PEMENANG HADIAH MINGGUAN<br />
+Periode 24 July - 31 July 2012</h1>
+             </div>
+			 
+             	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table tableWinner">
+                  {section name=i loop=$weeklyWinner}
+					  <tr>
+						<td><span>{$weeklyWinner[i].name}</span> dapat {$weeklyWinner[i].prize}</td>
+						<td class="point">{$weeklyWinner[i].point} Point</td>
+					  </tr>
+                   {/section}
+                </table>
+             <p style="margin:10px 0 0 0; font-size:18px; text-align:center; border-top:solid 2px #fff; padding:10px 0 0 ;">Ayo Bebeb semua jangan mau kalah. Ada hadiah Barokah spesial tiap minggu
+			buat 5 orang yang rajin login dan download konten!</p>
+        </div><!-- end .poupContent -->
+    </div><!-- end #poupContent -->
+</div><!-- end .popupContainer -->
+{/*}

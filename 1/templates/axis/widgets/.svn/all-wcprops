@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/axis/!svn/ver/233/trunk/web/templates/axis/widgets
+END
+pushSelling.html
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/axis/!svn/ver/230/trunk/web/templates/axis/widgets/pushSelling.html
+END
+userStats.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/axis/!svn/ver/67/trunk/web/templates/axis/widgets/userStats.html
+END
+newsTicker.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/axis/!svn/ver/224/trunk/web/templates/axis/widgets/newsTicker.html
+END
+adminHAP.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/axis/!svn/ver/90/trunk/web/templates/axis/widgets/adminHAP.html
+END
+obrolanMejaMakan.html
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/axis/!svn/ver/55/trunk/web/templates/axis/widgets/obrolanMejaMakan.html
+END
+tweeterFeed.html
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/axis/!svn/ver/12/trunk/web/templates/axis/widgets/tweeterFeed.html
+END
+weeklyWinner.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/axis/!svn/ver/220/trunk/web/templates/axis/widgets/weeklyWinner.html
+END
+updateStatus.html
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/axis/!svn/ver/233/trunk/web/templates/axis/widgets/updateStatus.html
+END
+updateStatus_disable.html
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/axis/!svn/ver/243/trunk/web/templates/axis/widgets/updateStatus_disable.html
+END

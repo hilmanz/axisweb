@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol
+END
+IProtocolProcessor.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/IProtocolProcessor.php
+END
+IResponseReader.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/IResponseReader.php
+END
+IComposableProtocolProcessor.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/IComposableProtocolProcessor.php
+END
+ProtocolException.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/ProtocolException.php
+END
+ICommandSerializer.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/ICommandSerializer.php
+END
+IResponseHandler.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/axis/!svn/ver/2/trunk/web/engines/Utility/Predis/lib/Predis/Protocol/IResponseHandler.php
+END

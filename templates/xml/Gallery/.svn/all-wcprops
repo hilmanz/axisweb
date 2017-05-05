@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/axis/!svn/ver/2/trunk/web/templates/xml/Gallery
+END
+relatedGallery.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/axis/!svn/ver/2/trunk/web/templates/xml/Gallery/relatedGallery.xml
+END
+picture_list.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/axis/!svn/ver/2/trunk/web/templates/xml/Gallery/picture_list.xml
+END
+pictures.xml
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/axis/!svn/ver/2/trunk/web/templates/xml/Gallery/pictures.xml
+END

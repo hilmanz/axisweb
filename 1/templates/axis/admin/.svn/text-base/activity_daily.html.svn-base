@@ -1,0 +1,88 @@
+<div style="padding:10px;">
+<h2>Activity Log Daily</h2>
+<hr>
+<h2>User : &nbsp;{$nama|upper}</h2>
+<strong>Total Login</strong>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td><strong>Tanggal</strong></td>
+	<td><strong>Total Login</strong></td>
+  </tr>
+  {section name=i loop=$list}
+  <tr>
+    <td width="20%"><a href="?s=activity&act=detail_hourly&userid={$list[i].user_id}&date={$list[i].date_time}&show=login" style="text-decoration:none;" > {$list[i].date_time|date_format}</a>&nbsp;</td>
+    <td>{$list[i].tot_login}&nbsp;</td>
+  </tr>
+  {/section}
+</table><br>
+<p>{$paging}</p>
+<strong>Total Update</strong>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td><strong>Tanggal</strong></td>
+	<td><strong>Total Update</strong></td>
+  </tr>
+  {section name=i loop=$list_update}
+  <tr>
+    <td width="20%"><a href="?s=activity&act=detail_hourly&userid={$list_update[i].user_id}&date={$list_update[i].date_time}&show=update" style="text-decoration:none;" > {$list_update[i].date_time|date_format}</a>&nbsp;</td>
+    <td>{$list_update[i].tot_update}&nbsp;</td>
+  </tr>
+  {/section}
+</table><br>
+<p>{$paging}</p>
+<strong>Total Upload</strong>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td><strong>Tanggal</strong></td>
+	<td><strong>Total Upload</strong></td>
+  </tr>
+  {section name=i loop=$list_upload}
+  <tr>
+    <td width="20%"><a href="?s=activity&act=detail_hourly&userid={$list_upload[i].user_id}&date={$list_upload[i].date_time}&show=upload" style="text-decoration:none;" > {$list_upload[i].date_time|date_format}</a>&nbsp;</td>
+    <td>{$list_upload[i].tot_upload}&nbsp;</td>
+  </tr>
+  {/section}
+</table><br>
+<p>{$paging}</p>
+<strong>Total Download</strong>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td><strong>Tanggal</strong></td>
+	<td><strong>Total Download</strong></td>
+  </tr>
+  {section name=i loop=$list_download}
+  <tr>
+    <td width="20%"><a href="?s=activity&act=detail_hourly&userid={$list_download[i].user_id}&date={$list_download[i].date_time}&show=download" style="text-decoration:none;" > {$list_download[i].date_time|date_format}</a>&nbsp;</td>
+    <td>{$list_download[i].tot_download}&nbsp;</td>
+  </tr>
+  {/section}
+</table><br>
+<p>{$paging}</p>
+<strong>Total Gift</strong>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td><strong>Tanggal</strong></td>
+	<td><strong>Total Gift</strong></td>
+  </tr>
+  {section name=i loop=$list_gift}
+  <tr>
+    <td width="20%"><a href="?s=activity&act=detail_hourly&userid={$list_gift[i].user_id}&date={$list_gift[i].date_time}&show=gift" style="text-decoration:none;" > {$list_gift[i].date_time|date_format}</a>&nbsp;</td>
+    <td>{$list_gift[i].tot_gift}&nbsp;</td>
+  </tr>
+  {/section}
+</table><br>
+<p>{$paging}</p>
+<strong>Total Logout</strong>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td><strong>Tanggal</strong></td>
+	<td><strong>Total Logout</strong></td>
+  </tr>
+  {section name=i loop=$list_logout}
+  <tr>
+    <td width="20%"><a href="?s=activity&act=detail_hourly&userid={$list_logout[i].user_id}&date={$list_logout[i].date_time}&show=logout" style="text-decoration:none;" > {$list_logout[i].date_time|date_format}</a>&nbsp;</td>
+    <td>{$list_logout[i].tot_logout}&nbsp;</td>
+  </tr>
+  {/section}
+</table>
+</div>

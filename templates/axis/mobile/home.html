@@ -1,0 +1,18 @@
+  	   <div id="container">
+			{section name=i loop=$obrolan}
+            <div class="row">
+                <a class="thumb showPopup" href="#popupUser"><img width="50" src="{$obrolan[i].img}" /></a>
+                <div class="entry">
+                    <p><a class="showPopup" href="#popupUser">@{$obrolan[i].nickname}</a> {$obrolan[i].posting|strip_tags}</p>
+                    <span class="time">{$timePosting[i]}</span>
+                   {*} <span class="date">17 Agustus 2012</span>{\*}
+                </div>
+            </div><!-- end .row -->
+          	{/section}
+        </div><!-- end #container -->
+        <div id="paging">
+        	<a href="?p={$paging.prev}" class="prev">PREV</a>
+        	<a href="?p={$paging.next}" class="next">NEXT</a> 
+        </div>
+		{$msg}
+		

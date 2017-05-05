@@ -1,0 +1,28 @@
+<div style="padding:10px;">
+<h2>Info Data</h2>
+<hr>
+<form action="index.php?s=user_management&act=edit_user" method="post" enctype="multipart/form-data">
+	<input type="hidden" name="id" value="{$id}">
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+{section name=i loop=$list}
+	<tr>
+	  <td width="10%">Images</td>
+	  <td>
+	  {if $list[i].image == ''}
+	  <img src="{$img_path}" alt="" /></a>&nbsp;
+	  {else}
+	  <img src="image_update/normal_{$list[i].image}" ><input type="hidden" name="currimg" value="{$img}" />
+	  {/if}
+	  <br>
+	  </td>
+	</tr>
+	<tr><td><strong>Userid</strong></td><td>{$list[i].user_id}</td></tr>
+	<tr><td><strong>Name</strong></td><td>{$list[i].nickname}</td></tr>
+	<tr><td><strong>Posting</strong></td><td>{$list[i].posting}</td></tr>
+	<tr><td><strong>Login (last login)</strong></td><td>{$list[i].last_login|date_format}</td></tr>
+	<tr><td><strong>Total Login</strong></td><td>{$list[i].tot_login}</td></tr>
+{/section}
+ </table>
+ </form>
+<input type="button" value="Close" onclick="javascript: window.location.href='index.php?s=user_management&id={$list[i].id}&name={$name}&search={$search}&btn={$btn}&st={$st}&datefoto={$list[i].date_time}&userid={$list[i].user_id}' ;" />
+</div>

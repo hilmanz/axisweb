@@ -1,0 +1,359 @@
+<div id="footer">
+	<div class="footer">
+        <a class="facebook" href="https://www.facebook.com/AXISgsm" target="_blank">&nbsp;</a>
+        <a class="twitter" href="https://twitter.com/AXISgsm" target="_blank">&nbsp;</a>
+		<span class="copy">&copy; 2012 AXIS. All rights reserved. <a href="faq.html" target="_blank">FAQ</a> | <a href="tnc.html" target="_blank">Terms and Conditions</a></span>
+	</div>
+</div><!-- end #footer -->
+ <script type="text/javascript">
+	var gud = '{$getUserData}';
+	var pc ='{$purchaseContent}';
+	var gvc ='{$getVerificationCode}';
+	var vc ='{$validationCode}';
+	var gtpafp='{$getTablePostingAndFoodPict}';
+	var ggd='{$getGiftData}';
+	var ugg='{$userGetGift}';
+	var cul ='{$cekUnlikeLogout}'; 
+	var since_home_id = 0; 
+	{literal}
+	$(document).ready(function(){
+	  //ping interval to determined if the user still login or not
+	  //pingInterval, updateStatsInterval, postingToTableInterval, cekUnlikeLogOutInterval, updateAdminStatusInterval;
+		pingTimeout = setTimeout(ping,2*1000);
+		//setInterval(updateStats,5*1000);
+		//setInterval(postingToTable,7*1000);
+		//setInterval(cekUnlikeLogOut,9*1000);
+		//setInterval(updateAdminStatus,5*1000);
+		init_seats(7,fid,nickname);
+		$(".centerText").html('');
+		
+		
+	$(".showPopupBeli").click(function(){
+			var targetID = $(this).attr('href');
+			var item_id = $(this).attr('items_id');
+				
+		
+			$.post('index.php?'+gud, function(data) {
+				
+				if(data.response==2){
+				
+					$(".popupTextMessage").html(data.status);
+									
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupMessages").fadeIn();
+					$("#popupMessages").addClass('visible');
+					$("#bgPopup").fadeIn();	
+					
+				}
+				
+				if(data.response==0){
+					
+									
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+						$(targetID).fadeIn();
+						$(targetID).addClass('visible');
+						$("#bgPopup").fadeIn();	
+					
+				}
+				if(data.response==1){
+					
+					$.post('index.php?'+pc,{item_id:item_id} ,function(data) {
+						
+					});
+					var htmlPaidContent = '<h1>Mau download konten ini?</h1>';
+					 htmlPaidContent += '<h2>Cek SMS dari AXIS di HP kamu, dan ikuti petunjuknya, ya!</h2>';
+					$('.messagePSConfirm').html(htmlPaidContent);
+			
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupPSConfirmMessage").fadeIn();
+					$("#popupPSConfirmMessage").addClass('visible');
+					$("#bgPopup").fadeIn();		
+				
+				}
+			});
+			
+	
+	});
+	
+	$("#sendVerCodeTOSMS").click(function(){
+		$.post('index.php?'+gvc, function(data) {
+			if(!data){
+					var htmlSuccessVerified ='Bep, Sori nih kodenya salah <br /> Coba lagi ya bep';
+					$(".popupTextMessage").html(htmlSuccessVerified);
+									
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupMessages").fadeIn();
+					$("#popupMessages").addClass('visible');
+					$("#bgPopup").fadeIn();				
+				}
+		
+			
+		});
+	
+	});
+	
+	
+	$('#sendVerCode').click(function(){
+		var verCode = $("#verCode").val();
+		$.post('index.php?'+vc, { code: verCode}, function(data) {
+			if(data.response==1){
+					var htmlSuccessVerified ="<h1>Selamat ya Beb!<br />";
+						htmlSuccessVerified += "Nomor Kamu udah Terverifikasi<br />";
+						htmlSuccessVerified += "Kalau kamu ada kendala atau pertanyaan, kamu bisa email ke : hemat@axisworld.co.id</h1>";
+					$(".popupTextMessage").html(htmlSuccessVerified);
+									
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupMessages").fadeIn();
+					$("#popupMessages").addClass('visible');
+					$("#bgPopup").fadeIn();		
+					
+				}else {
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+						$("#popupPSFailure").fadeIn();
+						$("#popupPSFailure").addClass('visible');
+						$("#bgPopup").fadeIn();	
+				
+				}
+		
+			
+		});
+	
+	});
+		
+		
+	});
+	
+	//tutup hadiah
+	var throwGiftInterval = setInterval(throwGift,1000*10);
+	
+	function ping(){
+	  send_ping(pt);
+	}
+	
+	function postingToTable(){
+		$.post('index.php?'+gtpafp,{since_id:since_home_id}, function(data) {
+					
+					if(data){
+						for( var idxPost in data){					
+							var fb_id_posting = data[idxPost].fb_id;
+							var itemHtmlPosting = '';
+							if (fb_id_posting != null){
+								if (data[idxPost].special == '1'){
+									$("#special_"+fb_id_posting).html('<div class="spotlight"></div>');
+								}
+								$("#nickname_"+fb_id_posting).html('<a onclick="javascript:profileConversation('+data[idxPost].user_id+');" class="showPopup" href="#popupUser">@'+data[idxPost].nickname)+'</a>';
+								$("#post_"+fb_id_posting).html(data[idxPost].posting);
+									if (data[idxPost].img){
+										itemHtmlPosting += '<div class="thumbFood">';
+										itemHtmlPosting += '<a class="showPopup" href="#popupImage" id="image_'+fb_id_posting+'" onclick="javascript:bigImage('+data[idxPost].user_id+')"><img src="image_update/medium_'+data[idxPost].img+'" /></a>';
+										itemHtmlPosting += '</div>';
+									}
+								$("#details_"+fb_id_posting).html('<a class="detail showPopup" href="#popupUser" onclick="javascript:profileConversation('+data[idxPost].user_id+')">click for detail</a>');
+								$("#piring_"+fb_id_posting).html(itemHtmlPosting);
+							}
+						}
+						since_home_id = data.lastPostingID;
+					}
+					clearTimeout(postingToTableTimeout);
+					updateStatsTimeout = setTimeout(updateStats, 2000)
+		});
+	}
+	var giftArr = new Array();
+	var freeContArr = new Array();
+	var last_gift_id=0;
+	function throwGift(){
+		var maxNumber = $(".item").length;
+		
+		$.post('index.php?'+ggd,{last_gift_id:last_gift_id},function(data) {
+			
+			for(var igift in data.rows){
+				
+				var indexNumber = getRandomInt(1,maxNumber);
+				if(data.rows[igift].n_status==1){
+					$('.gift_'+data.rows[igift].id).remove();
+					var eraseElement = giftArr.indexOf(data.rows[igift].id); 
+					giftArr.splice(eraseElement,1);
+					//alert(data.rows[igift].n_status);
+				}else{
+						
+						//alert(data.rows[igift].id);
+						$(".item").each(function (index, domEle){ 
+							//$('.gift_'+data.rows[igift].id).remove();
+								if(indexNumber==index){ 
+								if( $.inArray(data.rows[igift].id,giftArr) !=-1) return true
+								else{
+									$(this).children(".kursi").children(".a").remove();
+									$(this).children(".kursi").append('<a class="hadiah showPopup gift_'+data.rows[igift].id+'" href="#popupHadiah2" gift_id="'+data.rows[igift].id+'" s_id="'+data.last_id+'" onclick="clickHadiah('+data.rows[igift].id+','+data.last_id+','+data.nickname+','+data.imgBarokah+')" >&nbsp;</a>');
+									giftArr.push(data.rows[igift].id);
+								}
+							}else return true;
+							
+						});
+					
+				}
+			}
+			
+			
+			for(var iFreeCont in data.freeContent){
+				
+				var indexNumberFree = getRandomInt(1,maxNumber);
+				if(data.freeContent[iFreeCont].n_status==1){
+					$('.gift_'+data.freeContent[iFreeCont].id).remove();
+					var eraseElement = freeContArr.indexOf(data.freeContent[iFreeCont].id); 
+					freeContArr.splice(eraseElement,1);
+			
+				}else{
+											
+						$(".item").each(function (indexFree, domEleFree){ 
+					
+								if(indexNumberFree==indexFree){ 
+								if( $.inArray(data.freeContent[iFreeCont].id,freeContArr) !=-1) return true
+								else{
+									$(this).children(".kursi").children(".a").remove();
+									$(this).children(".kursi").append('<a class="freeContentHadiah showPopupBeli itd_'+data.freeContent[iFreeCont].id+'" href="#popupPSConfirm" items_id="'+data.freeContent[iFreeCont].id+'" onCLick="freeContentClick(\'#popupPSConfirm\','+data.freeContent[iFreeCont].id+')">&nbsp;</a>');
+									freeContArr.push(data.freeContent[iFreeCont].id);
+								}
+							}else return true;
+							
+						});
+					
+				}
+			}
+			
+			if( data.last_id) last_gift_id = data.last_id;
+			//console.log(last_gift_id);
+			//clearInterval(throwGiftInterval);
+				
+		});
+		
+	}
+	
+	
+	
+	function getRandomInt (min, max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+	function clickHadiah(giftID,sID){
+	
+		//var giftID = $(this).attr("gift_id");
+		var html ='';
+		
+		$.post('index.php?'+ugg, { gift_id: giftID,s_id:sID } ,function(data) {
+			//alert(data);
+					if(data.response==1)
+					{
+						
+						$('.giftClose').html('<a class="closePopup" href="#" onclick="shareFB(\''+data.nickname+'\',\''+data.imgBarokah+'\',\''+data.postingFBGift+'\');shareFBPopup();">X</a>');
+						html +="<h1>"+data.status+"</h1>";
+						$(".centerText").html(html);
+					}
+					if(data.response==0){
+						$('.giftClose').html('<a class="closePopup" href="#">X</a>');
+						html +="<h1>"+data.status+"</h1>";			
+						$(".centerText").html(html);
+					
+					}
+					
+					if(data.response==3){
+						$('.giftClose').html('<a class="closePopup" href="#">X</a>');
+						html +="<h1>"+data.status+"</h1>";
+							html +="<h2><a onclick='verificationBox()' href='javascript:void(0)'>Klik disini untuk verifikasikan nomor kamu</a></h2>";
+						$(".centerText").html(html);
+					
+					}
+					
+					$('.gift_'+giftID).remove();
+						var eraseElement = giftArr.indexOf(giftID); 
+						giftArr.splice(eraseElement,1);
+		});
+	
+	}
+	
+	
+	function verificationBox(){
+
+				$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+						$("#popupPSConfirm").fadeIn();
+						$("#popupPSConfirm").addClass('visible');
+						$("#bgPopup").fadeIn();	
+	
+	
+	}
+	
+	function cekUnlikeLogOut(){
+		$.post('index.php?'+cul,function(data) {
+				if(data!=1) location.href = "logout.php";
+				clearTimeout(cekUnlikeLogOutTimeout);
+				pingTimeout = setTimeout(send_ping,2*1000);
+		});
+	}
+	
+	
+	function freeContentClick(targetID,item_id){
+			
+			$.post('index.php?'+gud, function(data) {
+				
+				if(data.response==2){
+				
+					$(".popupTextMessage").html(data.status);
+									
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupMessages").fadeIn();
+					$("#popupMessages").addClass('visible');
+					$("#bgPopup").fadeIn();	
+					
+				}
+				
+				if(data.response==0){
+					
+									
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+						$(targetID).fadeIn();
+						$(targetID).addClass('visible');
+						$("#bgPopup").fadeIn();	
+					
+				}
+				if(data.response==1){
+					
+					$.post('index.php?'+pc,{item_id:item_id} ,function(data) {
+						$('.messagePSConfirm').html(data.message);
+					});
+					
+					$('.popupContainer').each(function(){
+							$(this).fadeOut();
+					});	
+					$("#popupPSConfirmMessage").fadeIn();
+					$("#popupPSConfirmMessage").addClass('visible');
+					$("#bgPopup").fadeIn();		
+				
+				}
+			});
+			
+						$('.itd_'+item_id).remove();
+						var eraseElement = freeContArr.indexOf(item_id); 
+						freeContArr.splice(eraseElement,1);
+	
+	
+	}
+	
+	{/literal}
+</script>

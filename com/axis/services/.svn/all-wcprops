@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/axis/!svn/ver/355/trunk/web/com/axis/services
+END
+facebook_service.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/axis/!svn/ver/16/trunk/web/com/axis/services/facebook_service.php
+END
+test_service.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/axis/!svn/ver/2/trunk/web/com/axis/services/test_service.php
+END
+twitter_service.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/axis/!svn/ver/355/trunk/web/com/axis/services/twitter_service.php
+END
+table_service.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/axis/!svn/ver/149/trunk/web/com/axis/services/table_service.php
+END

@@ -1,0 +1,434 @@
+/*
+Theme Name: AXIS BAROKAH
+Version: 1.0
+Author: ACIT JAZZ - 2012
+*/
+@import url('reset.css');
+@import url('animation.css');
+@import url('../font/flamacondensed.css');
+body {
+	background:url(../imgLanding/bg.png) #a51f76 repeat-x;
+	font-size:12px;
+	line-height:1.4;
+	letter-spacing:0.01em;
+	font-family:Verdana, Geneva, sans-serif;
+	color:#333333;
+}
+#body{
+	background:url(../imgLanding/bgefx.png) no-repeat center top;
+	width:100%; height:100%;
+	left:0;
+	top:0;
+}
+/* ============ LAYOUT =================*/
+#container{
+	width:1000px;
+	margin:0 auto;
+	position:relative;
+	color:#fff;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	text-align:center;
+	top:-50px;
+	height:800px;
+}
+#container h1{
+	font-size:35px;
+	margin:0;
+	text-shadow:0 4px 2px #000;
+	clear:both;
+}
+#container h2{
+	font-size:18px;
+	margin:15px 0;
+}
+#container h3{
+	font-size:18px;
+	margin:0;
+	position:absolute;
+	top:660px;
+	text-align:center;
+	width:100%;
+}
+#top {
+	width:100%;
+	margin:0 auto;
+	position:relative;
+	padding:20px 0;
+	overflow:hidden;
+	height:68px;
+}
+.wrapper {
+	width:1000px;
+	margin:0 auto;
+	position:relative;
+}
+#logoBarokah {
+	background:url(../imgLanding/logobarokah.png) no-repeat;
+	width:376px;
+	height:439px;
+	text-decoration:none;
+	display:block;
+	position:absolute;
+	left:50%;
+	margin:0 0 0 -188px;
+	top:120px;
+}
+#logoBerkah{
+	background:url(../imgLanding/logo_berkah.png) no-repeat;
+	width:134px;
+	height:135px;
+	text-decoration:none;
+	display:block;
+	position:absolute;
+	left:50%;
+	margin:0 0 0 -67px;
+	top:700px;
+}
+#confacebook,#lanjut {
+	background:url(../imgLanding/loginfb.png) no-repeat;
+	width:384px;
+	height:81px;
+	text-decoration:none;
+	display:block;
+	position:absolute;
+	left:50%;
+	margin:0 0 0 -192px;
+	top:550px;
+}
+#lanjut {
+	background:url(../imgLanding/loginfb_lanjut.png) no-repeat;
+}
+.logoAxis {
+	background:url(../imgLanding/axis_logo.png) no-repeat;
+	display:block;
+	width:173px;
+	height:68px;
+	margin:0 30px 30px 0;
+	float:right;
+	text-decoration:none;
+}
+#hp1{
+	width:64px; height:114px;
+	position:absolute;
+	background:url(../imgLanding/hp1.png) no-repeat;
+	left:220px;
+	top:160px;
+}
+#hp2{
+	width:184px; height:198px;
+	position:absolute;
+	background:url(../imgLanding/hp2.png) no-repeat;
+	left:130px;
+	top:340px;
+}
+#hp3{
+	width:83px; height:129px;
+	position:absolute;
+	background:url(../imgLanding/hp3.png) no-repeat;
+	right:180px;
+	top:200px;
+}
+#hp4{
+	width:61px; height:90px;
+	position:absolute;
+	background:url(../imgLanding/hp4.png) no-repeat;
+	right:250px;
+	top:340px;
+}
+#hp5{
+	width:87px; height:130px;
+	position:absolute;
+	background:url(../imgLanding/hp5.png) no-repeat;
+	right:170px;
+	top:380px;
+}
+#fd{
+	width:91px; height:29px;
+	position:absolute;
+	background:url(../imgLanding/fd.png) no-repeat;
+	left:50%;
+	margin:0 0 0 -45px;
+	top:480px;
+}
+#container2{
+	background:url(../imgLanding/bg_landing2.png) no-repeat;
+	width:918px; height:984px;
+	margin:0 auto;
+	position:relative;
+}
+#container2 .logoAxis{
+	position:absolute;
+	right:85px;
+	top:55px;
+}
+#container2 #logoBerkah{
+	background:url(../imgLanding/logo_berkah2.png) no-repeat;
+	width:219px; height:232px;
+	position:absolute;
+	top:777px;
+	left:715px;
+}
+#container2 h1{
+	color:#4d3079;
+	position:absolute;
+	left:420px;
+	top:162px;
+	font-size:30px;
+}
+.textMiddle{
+    color: #4D3079;
+    font-size: 11px;
+	line-height:20px;
+    position: absolute;
+    right: 368px;
+    text-align: right;
+    top: 730px;
+    width: 500px;
+}
+.textFoot{
+    color: #4D3079;
+    font-size: 15px;
+    left: 140px;
+    line-height: 20px;
+    position: absolute;
+    top: 884px;
+    width: 500px;
+}
+#fbCon{
+	background:url(../imgLanding/fbcon.png) no-repeat;
+	display:block;
+	width:213px; height:36px;
+	text-decoration:none;
+	position:absolute;
+	top:740px;
+	right:85px;
+}
+#btnLanjut{
+	font-size:65px;
+	color:#9f005f;
+	text-decoration:none;
+    font-family: 'FlamaCondensedBookRegular',arial;
+	position:absolute;
+	top:716px;
+	left:610px;
+	text-shadow:0 1px 1px #fff;
+}
+#btnLanjut:hover{
+	color:#e50089;
+}
+#slides{
+	width:810px;
+	height:330px;
+	position:absolute;
+	overflow:hidden;
+	top:330px;
+	left:53px;
+}
+.lof-slidecontent, .lof-slidecontent a {
+	color:#FFF;	
+}
+.lof-slidecontent a.readmore{
+	color:#58B1EA;
+	font-size:95%;
+	
+}
+.lof-slidecontent{
+	position:relative;
+	overflow:hidden;
+	left:-25px;
+}
+.lof-slidecontent .preload{
+	height:100%;
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:100000;
+	text-align:center;
+}
+.lof-slidecontent .preload div{
+	height:100%;
+	width:100%;
+	display:none;
+	background:transparent url(../imgLanding/load-indicator.gif) no-repeat scroll 50% 50%;
+}
+.lof-main-outer{
+	position:relative;
+	height:100%;
+	width:900px;
+	z-index:3px;
+	overflow:hidden;
+}
+
+
+/*******************************************************/
+.lof-main-item-desc{
+	z-index:100px;
+	position:absolute;
+	bottom:50px;
+	left:0px;
+	width:350px;
+	background:url(../imgLanding/bg_trans.png);
+	height:100px;
+	/* filter:0.7(opacity:60) */
+	padding:10px;
+}
+.lof-main-item-desc p{
+	margin:0 8px;
+	padding:8px 0
+}
+.lof-main-item-desc h3{
+	padding:0;
+	margin:0
+}
+.lof-main-item-desc h2{
+	padding:0;
+	margin:15px 0 0 0px;
+}
+.lof-main-item-desc h3 a{	
+	margin:0;
+	background:#C01F25;
+	font-size:75%;
+	padding:2px 3px;
+	font-family:"Trebuchet MS",Trebuchet,Arial,Verdana,sans-serif;
+	text-transform:uppercase;
+	text-decoration:none
+}
+.lof-main-item-desc h3 a:hover{
+
+	text-decoration:underline;
+}
+.lof-main-item-desc h3 i {
+	font-size:70%;
+}
+
+/* main flash */
+ul.lof-main-wapper{
+	/* margin-right:auto; */
+	overflow:hidden;
+	/*background:transparent url(../imgLanding/load-indicator.gif) no-repeat scroll 50% 50%;*/
+	padding:0px;
+	margin:0;
+	position:absolute;
+	overflow:hidden;
+}
+
+ul.lof-main-wapper li{
+	overflow:hidden;
+	padding:0px;
+	margin:0px;
+	float:left;
+	position:relative;
+}
+.lof-opacity  li{
+	position:absolute;
+	top:0;
+	left:0;
+	float:inherit;
+}
+ul.lof-main-wapper li img{
+	padding:0px;	
+}
+
+/* item navigator */
+.lof-navigator-wapper {
+	position:absolute;
+	bottom:10px;
+	right:10px;
+	background:url(../imgLanding/transparent_bg.png) repeat;
+	padding:5px 0px;
+}
+.lof-navigator-outer{
+	position:relative;
+	z-index:100;
+	height:180px;
+	width:310px;
+	overflow:hidden;
+	color:#FFF;
+	float:left
+}
+ul.lof-navigator{
+	top:0;
+	padding:0;
+	margin:0;
+	position:absolute;
+	width:100%;
+}
+ul.lof-navigator li{
+	cursor:hand; 
+	cursor:pointer;
+	list-style:none;
+	padding:0;
+	margin-left:0px;
+	overflow:hidden;
+	float:left;
+	display:block;
+
+	text-align:center;
+
+}
+ul.lof-navigator li img{
+	border:#666 solid 3px;	
+}
+ul.lof-navigator li.active img, ul.lof-navigator li:hover img {
+	border:#A8A8A8 solid 3px;
+}
+.lof-navigator-wapper .lof-next,  .lof-navigator-wapper .lof-previous{
+	display:block;
+	width:22px;
+	height:30px;
+	color:#FFF;
+	cursor:pointer;
+
+}
+.lof-navigator-wapper .lof-next {
+	float:left;	
+	text-indent:-999px;
+	margin-right:5px;
+	background:url(../imgLanding/arrow-l.png) no-repeat right center;
+}
+.lof-navigator-wapper .lof-previous {
+	float:left;	
+	text-indent:-999px;
+	margin-left:5px;
+	background:url(../imgLanding/arrow-r.png) no-repeat left center;
+}
+/* ============ FOOTER =================*/
+
+#footer{
+	background:url(../imgLanding/bg_foot.png) repeat-x;
+	height:48px;
+	clear:both;
+	margin:40px 0 0 0;
+	width:100%;
+}
+.footer{
+	background:url(../imgLanding/foot.png) no-repeat;
+	width:626px; height:33px;
+	margin:0 auto;
+	text-align:center;
+	padding:15px 0 0 0;
+	color:#fff;
+}
+.footer .facebook,.footer .twitter{
+	background:url(../imgLanding/social_footer.png) no-repeat;
+	width:19px; height:19px;
+	display:block;
+	float:left;
+	margin:0 5px 0 92px;
+	text-decoration:none;
+}
+.footer .twitter{
+	background:url(../imgLanding/social_footer.png) no-repeat -27px 0;
+	margin:0;
+}
+.footer a{
+	color:#fff;
+	text-decoration:underline;
+}
+span.copy{
+	float:left;
+	margin:0 0 0 10px;
+	display:block;
+	line-height:20px;
+}

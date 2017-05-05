@@ -1,0 +1,215 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry
+END
+SpryDataExtensions.js
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryDataExtensions.js
+END
+SpryValidationSelect.js
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryValidationSelect.js
+END
+SpryUtils.js
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryUtils.js
+END
+SpryDOMUtils.js
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryDOMUtils.js
+END
+SpryXML.js
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryXML.js
+END
+SpryAccordion.js
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryAccordion.js
+END
+xpath.js
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/xpath.js
+END
+SpryValidationRadio.js
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryValidationRadio.js
+END
+SpryData.js
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryData.js
+END
+SpryImageLoader.js
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryImageLoader.js
+END
+SpryAutoSuggest.js
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryAutoSuggest.js
+END
+SpryValidationPassword.js
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryValidationPassword.js
+END
+SpryDataSetShell.js
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryDataSetShell.js
+END
+SpryNestedJSONDataSet.js
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryNestedJSONDataSet.js
+END
+SpryRating.js
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryRating.js
+END
+SpryHTMLPanel.js
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryHTMLPanel.js
+END
+SpryDebug.js
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryDebug.js
+END
+SpryValidationTextarea.js
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryValidationTextarea.js
+END
+SpryMenuBar.js
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryMenuBar.js
+END
+SpryTooltip.js
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryTooltip.js
+END
+SprySlidingPanels.js
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SprySlidingPanels.js
+END
+SpryValidationCheckbox.js
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryValidationCheckbox.js
+END
+SpryCSVDataSet.js
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryCSVDataSet.js
+END
+SpryValidationTextField.js
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryValidationTextField.js
+END
+SpryValidationConfirm.js
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryValidationConfirm.js
+END
+SpryNestedXMLDataSet.js
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryNestedXMLDataSet.js
+END
+SpryCollapsiblePanel.js
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryCollapsiblePanel.js
+END
+SpryHTMLDataSet.js
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryHTMLDataSet.js
+END
+SpryPagedView.js
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryPagedView.js
+END
+SpryNotifier.js
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryNotifier.js
+END
+SpryEffects.js
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryEffects.js
+END
+SpryJSONDataSet.js
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryJSONDataSet.js
+END
+SpryTSVDataSet.js
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryTSVDataSet.js
+END
+SpryURLUtils.js
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryURLUtils.js
+END
+SpryTabbedPanels.js
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/axis/!svn/ver/2/trunk/web/admin/jscripts/spry/SpryTabbedPanels.js
+END

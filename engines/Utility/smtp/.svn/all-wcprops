@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/axis/!svn/ver/2/trunk/web/engines/Utility/smtp
+END
+ntlm_sasl_client.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/axis/!svn/ver/2/trunk/web/engines/Utility/smtp/ntlm_sasl_client.php
+END
+SMTPMailer.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/axis/!svn/ver/2/trunk/web/engines/Utility/smtp/SMTPMailer.php
+END
+digest_sasl_client.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/axis/!svn/ver/2/trunk/web/engines/Utility/smtp/digest_sasl_client.php
+END
+basic_sasl_client.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/axis/!svn/ver/2/trunk/web/engines/Utility/smtp/basic_sasl_client.php
+END
+sasl.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/axis/!svn/ver/2/trunk/web/engines/Utility/smtp/sasl.php
+END
+plain_sasl_client.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/axis/!svn/ver/2/trunk/web/engines/Utility/smtp/plain_sasl_client.php
+END
+smtp.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/axis/!svn/ver/2/trunk/web/engines/Utility/smtp/smtp.php
+END
+DNS.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/axis/!svn/ver/2/trunk/web/engines/Utility/smtp/DNS.php
+END
+cram_md5_sasl_client.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/axis/!svn/ver/2/trunk/web/engines/Utility/smtp/cram_md5_sasl_client.php
+END
+rrcompat.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/axis/!svn/ver/2/trunk/web/engines/Utility/smtp/rrcompat.php
+END
+getmxrr.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/axis/!svn/ver/2/trunk/web/engines/Utility/smtp/getmxrr.php
+END
+login_sasl_client.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/axis/!svn/ver/2/trunk/web/engines/Utility/smtp/login_sasl_client.php
+END

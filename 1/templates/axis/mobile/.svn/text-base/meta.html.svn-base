@@ -1,0 +1,11 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AXIS BAROKAH - GSM YANG BAIK</title>
+<link rel="shortcut icon" href="{$mobileUrl}img/favicon.ico">
+<link rel="apple-touch-icon" href="{$mobileUrl}img/favicon.png">
+<link rel="stylesheet" type="text/css" href="{$mobileUrl}css/axismobile.css">
+<script type="text/javascript" src="{$mobileUrl}js/jquery-1.js"></script>
+<script type="text/javascript" src="{$mobileUrl}js/jquery-ui-1.js"></script>
+<script type="text/javascript" src="{$mobileUrl}js/axis.js"></script>
+</head>

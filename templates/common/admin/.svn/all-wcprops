@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/axis/!svn/ver/213/trunk/web/templates/common/admin
+END
+dashboard_config.html
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/axis/!svn/ver/2/trunk/web/templates/common/admin/dashboard_config.html
+END
+user_edit.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/axis/!svn/ver/2/trunk/web/templates/common/admin/user_edit.html
+END
+message.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/axis/!svn/ver/2/trunk/web/templates/common/admin/message.html
+END
+exportTo.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/axis/!svn/ver/2/trunk/web/templates/common/admin/exportTo.html
+END
+default.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/axis/!svn/ver/2/trunk/web/templates/common/admin/default.html
+END
+user_manage.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/axis/!svn/ver/2/trunk/web/templates/common/admin/user_manage.html
+END
+dashboard.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/axis/!svn/ver/2/trunk/web/templates/common/admin/dashboard.html
+END
+user_new.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/axis/!svn/ver/2/trunk/web/templates/common/admin/user_new.html
+END
+permission.html
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/axis/!svn/ver/2/trunk/web/templates/common/admin/permission.html
+END
+admin.html
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/axis/!svn/ver/213/trunk/web/templates/common/admin/admin.html
+END
+dialog.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/axis/!svn/ver/2/trunk/web/templates/common/admin/dialog.html
+END
+login.dummy.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/axis/!svn/ver/2/trunk/web/templates/common/admin/login.dummy.html
+END
+broadcast.html
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/axis/!svn/ver/2/trunk/web/templates/common/admin/broadcast.html
+END
+paging.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/axis/!svn/ver/2/trunk/web/templates/common/admin/paging.html
+END
+config.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/axis/!svn/ver/2/trunk/web/templates/common/admin/config.html
+END
+dashboard_panel.html
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/axis/!svn/ver/2/trunk/web/templates/common/admin/dashboard_panel.html
+END
+login.html
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/axis/!svn/ver/23/trunk/web/templates/common/admin/login.html
+END
+edit_config.html
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/axis/!svn/ver/2/trunk/web/templates/common/admin/edit_config.html
+END

@@ -1,0 +1,89 @@
+<div style="padding:10px;">
+<h2>Activity Log Hourly</h2>
+<hr>
+<h2>User : &nbsp;{$nama|upper}</h2>
+<h2>Tanggal : &nbsp;{$date|date_format}</h2>
+<strong>Total Login</strong>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td width="20%"><strong>Jam</strong></td>
+	<td><strong>Total Login</strong></td>
+  </tr>
+  {section name=i loop=$list}
+  <tr>
+    <td>{$list[i].hour}&nbsp;</td>
+    <td>{$list[i].tot_login}&nbsp;</td>
+  </tr>
+  {/section}
+</table><br>
+<p>{$paging}</p>
+<strong>Total Update</strong>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td width="20%"><strong>Jam</strong></td>
+	<td><strong>Total Update</strong></td>
+  </tr>
+  {section name=i loop=$list_update}
+  <tr>
+    <td>{$list_update[i].hour}&nbsp;</td>
+    <td>{$list_update[i].tot_update}&nbsp;</td>
+  </tr>
+  {/section}
+</table><br>
+<p>{$paging}</p>
+<strong>Total Upload</strong>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td width="20%"><strong>Jam</strong></td>
+	<td><strong>Total Upload</strong></td>
+  </tr>
+  {section name=i loop=$list_upload}
+  <tr>
+    <td>{$list_upload[i].hour}&nbsp;</td>
+    <td>{$list_upload[i].tot_upload}&nbsp;</td>
+  </tr>
+  {/section}
+</table><br>
+<p>{$paging}</p>
+<strong>Total Download</strong>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td width="20%"><strong>Jam</strong></td>
+	<td><strong>Total Download</strong></td>
+  </tr>
+  {section name=i loop=$list_download}
+  <tr>
+    <td>{$list_download[i].hour}&nbsp;</td>
+    <td>{$list_download[i].tot_download}&nbsp;</td>
+  </tr>
+  {/section}
+</table><br>
+<p>{$paging}</p>
+<strong>Total Gift</strong>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td width="20%"><strong>Jam</strong></td>
+	<td><strong>Total Gift</strong></td>
+  </tr>
+  {section name=i loop=$list_gift}
+  <tr>
+    <td>{$list_gift[i].hour}&nbsp;</td>
+    <td>{$list_gift[i].tot_gift}&nbsp;</td>
+  </tr>
+  {/section}
+</table><br>
+<p>{$paging}</p>
+<strong>Total Logout</strong>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="addlist zebra">
+  <tr class="head">
+    <td width="20%"><strong>Jam</strong></td>
+	<td><strong>Total Logout</strong></td>
+  </tr>
+  {section name=i loop=$list_logout}
+  <tr>
+    <td>{$list_logout[i].hour}&nbsp;</td>
+    <td>{$list_logout[i].tot_logout}&nbsp;</td>
+  </tr>
+  {/section}
+</table>
+</div>

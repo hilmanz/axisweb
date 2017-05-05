@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/axis/!svn/ver/144/trunk/web/admin
+END
+admin.css
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/axis/!svn/ver/2/trunk/web/admin/admin.css
+END
+drop.js
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/axis/!svn/ver/2/trunk/web/admin/drop.js
+END
+logout.php
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/axis/!svn/ver/2/trunk/web/admin/logout.php
+END
+page.php
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/axis/!svn/ver/2/trunk/web/admin/page.php
+END
+new_admin.php
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/axis/!svn/ver/2/trunk/web/admin/new_admin.php
+END
+drop.css
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/axis/!svn/ver/2/trunk/web/admin/drop.css
+END
+index.php
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/axis/!svn/ver/144/trunk/web/admin/index.php
+END
+login.php
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/axis/!svn/ver/2/trunk/web/admin/login.php
+END
+common.php
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/axis/!svn/ver/2/trunk/web/admin/common.php
+END
+oldadmin.css
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/axis/!svn/ver/2/trunk/web/admin/oldadmin.css
+END

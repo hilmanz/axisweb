@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+{$meta}
+</head>
+<body>
+<div id="body">
+	{$header}
+	{$mainContent}
+	{$footer}
+</div>
+{include file="axisBerkah/popup/popup_edit_profile.html"}
+{include file="axisBerkah/popup/popup_paketramadhan.html"}
+<div id="bgPopup"></div>
+
+
+ {literal}
+	<script type="text/javascript">
+    
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-867847-38']);
+      _gaq.push(['_setDomainName', 'tangkapberkahaxis.com']);
+      _gaq.push(['_trackPageview']);
+    
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    
+    </script>
+        <!--
+    Start of DoubleClick Floodlight Tag: Please do not remove
+    Activity name of this tag: Axis Berkah Welcome Page 201207
+    URL of the webpage where the tag is expected to be placed: http://www.tangkapberkahaxis.com
+    This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+    Creation Date: 07/18/2012
+    -->
+    <script type="text/javascript">
+    var axel = Math.random() + "";
+    var a = axel * 10000000000000;
+    document.write('<iframe src="http://fls.doubleclick.net/activityi;src=3749975;type=axisr808;cat=axisb414;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+    </script>
+    <noscript>
+    <iframe src="http://fls.doubleclick.net/activityi;src=3749975;type=axisr808;cat=axisb414;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+    </noscript>
+    
+    <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+    {/literal}
+	
+</body>
+
+
+	
+</html>

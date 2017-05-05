@@ -1,0 +1,22 @@
+<div id="popupPSConfirm" class="popupContainer" style="display:block">
+    <div id="popupContent">
+    	<div class="popupTop">
+       	 <a class="closePopup" href="#">X</a>
+        </div>
+        <div class="poupContent messagePSConfirm">
+        	<h1>BeB, sorry nih kamu harus <br />
+validasi no. Hp kamu dulu</h1>
+
+<h2><a id="sendVerCodeTOSMS" href="javascript:void(0)" >KLIK Disini Untuk Kirim kode verifikasi ke HP kamu</a></h2>
+
+<h2>Cek SMS ya beB lalu masukin kode verifikasi  <br />
+ke kotak dibawah dan klik confirm. <br /> Gratis lho beb..</h2>
+
+
+			<form method="post" action="#" id="PSConfirm">
+				<input type="text" name="verCode" id="verCode" value="xxx xxxx xxxx" onclick="this.value=''" />
+				<input type="button" value="CONFIRM" id="sendVerCode" />
+			</form>
+        </div><!-- end .poupContent -->
+    </div><!-- end #poupContent -->
+</div><!-- end .popupContainer -->

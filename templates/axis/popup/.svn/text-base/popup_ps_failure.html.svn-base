@@ -1,0 +1,12 @@
+<div id="popupPSFailure" class="popupContainer" style="display:block">
+    <div id="popupContent">
+    	<div class="popupTop">
+       	 <a class="closePopup" href="#">X</a>
+        </div>
+        <div class="poupContent messagePSConfirm">
+        	<h1>Beb, Sori nih kodenya salah</h1>
+			<h2>Coba lagi ya beb!</h2>
+       		<a class="backPopup showPopup" href="#popupPSConfirm">BACK</a>
+        </div><!-- end .poupContent -->
+    </div><!-- end #poupContent -->
+</div><!-- end .popupContainer -->

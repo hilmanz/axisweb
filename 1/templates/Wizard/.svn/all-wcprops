@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/axis/!svn/ver/2/trunk/web/templates/Wizard
+END
+navigation.html
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/axis/!svn/ver/2/trunk/web/templates/Wizard/navigation.html
+END
+container.html
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/axis/!svn/ver/2/trunk/web/templates/Wizard/container.html
+END
+edit_container.html
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/axis/!svn/ver/2/trunk/web/templates/Wizard/edit_container.html
+END

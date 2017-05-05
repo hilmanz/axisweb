@@ -1,0 +1,65 @@
+<div id="popupEditProfile" class="popupContainer">
+    <div id="popupContent">
+    	<div class="popupTop">
+       	 <a class="closePopup" href="#">X</a>
+        </div>
+        <div class="poupContent" style="position: relative">
+        	<form id="edit_profile" action="index.php?page=profile&act=updateProfile" method="post">
+            	<div class="left">
+            		<h1>EDIT DATA KAMU</h1>
+                    <div class="row">
+                        <label>NICKNAME</label>
+                        <input type="text" name="nickname" id="nickname" />
+                    </div>
+                    <div class="row">
+                        <label>NOMOR HP</label>
+                        <input type="text" name="hp" id="hp" class="numeric" maxlength="14" />
+                    </div>
+                </div>
+                <div class="right">
+                	<input type="submit" value="SAVE" />
+                </div>
+            </form>
+        </div><!-- end .poupContent -->
+		<div class="editNoHP" style="width: 580px; height: 118px;margin-top: 35px;padding: 35px 0 40px 0;"></div>
+		<div class="loaderEditNoHP" style="width: 580px; height: 228px;"><img src="img/loaders.gif" /></div>
+    </div><!-- end #poupContent -->
+</div><!-- end .popupContainer -->
+<script type="text/javascript">
+{literal}
+	function loadProfile(){
+		$.ajax({
+				url: 'index.php?page=profile&act=loadProfile',
+				dataType: 'json',
+				beforeSend: function(){
+				},
+				success: function(response) {
+					$('.editNoHP').fadeOut();
+					$('#nickname').val(response['nickname']);
+					$('#hp').val(response['no_hp']);
+				}
+			});
+	}
+	var options = { 
+			target:        '.editNoHP',   // target element(s) to be updated with server response 
+			beforeSubmit:  preEditNoHP,  // pre-submit callback 
+			success:       postEditNoHP,  // post-submit callback 
+		};
+	$('#edit_profile').live('submit', function(){
+		$(this).ajaxSubmit(options);
+		return false;
+	});
+	$('.closePopup').live('click', function(){
+		$('.editNoHP').fadeOut();
+	});
+	function preEditNoHP(){
+		$('#popupEditProfile .loaderEditNoHP').fadeIn();
+	}
+	function postEditNoHP(){
+		$('#popupEditProfile .loaderEditNoHP').fadeOut();
+		if ($('.editNoHP').text() != null || $('.editNoHP').text() != ""){
+			$('.editNoHP').fadeIn();
+		}
+	}
+{/literal}
+</script>
